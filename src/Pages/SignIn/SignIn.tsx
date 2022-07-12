@@ -31,10 +31,14 @@ function SignIn() {
     <section
       className="signInContainer"
     >
-      <LogoSignIn />
-      <AuthForm
-        authFormProps={formProps}
-      />
+      <section
+        className="container"
+      >
+        <LogoSignIn />
+        <AuthForm
+          authFormProps={formProps}
+        />
+      </section>
     </section>
   );
 }
