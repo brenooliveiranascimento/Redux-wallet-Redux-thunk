@@ -1,0 +1,74 @@
+.formCard {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  align-items: center;
+  justify-content: center;
+}
+
+.blourContainer {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  align-items: center;
+  justify-content: center;
+  filter: blur(3px);
+  background-color: rgba(221, 221, 221, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.formContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 99;
+}
+
+.formContent input {
+  width: 300px;
+  border: none;
+  background-color: rgba(221, 221, 221, 0.2);
+  border-radius: 6px;
+  margin: 10px;
+  height: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+  color: #fff;
+  z-index: 99;
+  font-size: 17px;
+  padding: 5px;
+}
+
+.formContent button {
+  border: none;
+  padding: 10px;
+  width: 13rem;
+  border-radius: 6px;  
+  background-color: rgba(200, 20, 60, 0.1);
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: 700;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  transition: all 0,7s;
+}
+
+button:hover{
+  background-color: rgba(93, 10, 26, 0.3);
+}
+
+@media screen and (max-width: 1000px) {
+  .blourContainer {
+    width: 70%;
+  }
+  .formContent input {
+    align-self: flex-start;
+    width: 350px;
+  }
+}

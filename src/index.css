@@ -7,6 +7,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+button {
+  cursor: pointer;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

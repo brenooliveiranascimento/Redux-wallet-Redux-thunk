@@ -6,7 +6,7 @@ class Home extends React.Component {
       <h1>
         Area de Home
       </h1>
-    )
+    );
   }
 }
 

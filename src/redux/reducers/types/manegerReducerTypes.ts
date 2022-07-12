@@ -1,7 +1,7 @@
 export interface actionTypes {
   type: string,
-  paymount: any
-};
+  payload: any
+}
 
 export interface stateTypes {
   monthlyPayments: Array<object>,

@@ -1,0 +1,26 @@
+.signInContainer {
+  display: flex;  
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100%;
+  background: url("../../assets//layered-waves-haikei\ \(19\).svg") fixed center;
+  background-size: cover;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+  }
+}

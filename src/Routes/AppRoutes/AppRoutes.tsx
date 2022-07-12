@@ -7,10 +7,10 @@ class AppRoutes extends React.Component {
   render() {
     return (
       <>
-        <Route exact path="/Home" component={ Home }/>
-        <Route exact path="/" component={ SignIn }/>
+        <Route exact path="/Home" component={Home} />
+        <Route exact path="/" component={SignIn} />
       </>
-    )
+    );
   }
 }
 

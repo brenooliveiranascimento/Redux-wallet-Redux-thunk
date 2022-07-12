@@ -17,5 +17,5 @@ export interface stateTypes {
 
 export interface actionTypes {
   type: string,
-  paymount: any
-};
+  payload: object,
+}
