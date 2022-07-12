@@ -1,22 +1,37 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { mapStateTypes } from '../../globalTypes/mapStateTypes';
+import React, { useState } from 'react';
+import AuthForm from '../../Components/Forms/AuthForm/AuthForm';
+import { authFormPropTypes, updateUserDataPropTypes, userDataType } from '../../globalTypes/mapStateTypes';
 // import firebase from '../../Services/firebase_connection';
 
-class SignIn extends React.Component {
-  render() {
-    return (
+function SignIn() {
+  const [userData, setUserData] = useState<userDataType>({
+    name: '',
+    email: '',
+    password: '',
+  });
 
-      <h1>
-        Area de LogIn
-      </h1>
-    );
-  }
+  const updateUserData = ({ target }: updateUserDataPropTypes) => {
+    const { value, name } = target;
+    const updateData = structuredClone(userData);
+    updateData[name] = value;
+    setUserData(updateData);
+  };
+
+  const handleSignIn = () => console.log('logou');
+
+  const formProps: authFormPropTypes = {
+    updateUserData,
+    userData,
+    handleSignIn,
+  };
+
+  return (
+    <section>
+      <AuthForm
+        authFormProps={formProps}
+      />
+    </section>
+  );
 }
 
-const mapStateToProps = (state: mapStateTypes) => ({
-  userData: state.userReducer,
-  monthlyPayment: state.manegersReducer,
-});
-
-export default connect(mapStateToProps, null)(SignIn);
+export default SignIn;
