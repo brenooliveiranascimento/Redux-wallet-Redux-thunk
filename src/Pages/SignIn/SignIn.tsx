@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { mapStateTypes } from '../../globalTypes/mapStateTypes';
+import firebase from '../../Services/firebase_connection';
 
 class SignIn extends React.Component {
-  
+
   render() {
     return (
       <h1>
