@@ -62,3 +62,13 @@
 button:hover{
   background-color: rgba(93, 10, 26, 0.3);
 }
+
+@media screen and (max-width: 1000px) {
+  .blourContainer {
+    width: 70%;
+  }
+  .formContent input {
+    align-self: flex-start;
+    width: 350px;
+  }
+}
