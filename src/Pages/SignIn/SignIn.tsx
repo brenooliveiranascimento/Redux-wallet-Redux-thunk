@@ -11,6 +11,7 @@ function SignIn() {
     email: '',
     password: '',
   });
+  const [isRegister, setIsRegister] = useState<boolean>(false);
 
   const updateUserData = ({ target }: updateUserDataPropTypes) => {
     const { value, name } = target;
@@ -25,6 +26,8 @@ function SignIn() {
     updateUserData,
     userData,
     handleSignIn,
+    isRegister,
+    handleRegisterAndSignIn: () => setIsRegister(!isRegister),
   };
 
   return (

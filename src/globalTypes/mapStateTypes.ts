@@ -17,11 +17,13 @@ export interface updateUserDataPropTypes {
 export interface userDataType {
   name: string,
   email: string,
-  password: string
+  password: string,
 }
 
 export interface authFormPropTypes {
   updateUserData: any,
   userData: object,
   handleSignIn: any,
+  handleRegisterAndSignIn: any
+  isRegister: boolean
 }

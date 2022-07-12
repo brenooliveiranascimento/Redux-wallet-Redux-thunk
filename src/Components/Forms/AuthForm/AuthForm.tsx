@@ -2,7 +2,13 @@ import React from 'react';
 import './AuthForm.css';
 
 function AuthForm({ authFormProps }: any) {
-  const { updateUserData, userData, handleSignIn } = authFormProps;
+  const {
+    updateUserData,
+    userData,
+    handleSignIn,
+    isRegister,
+    handleRegisterAndSignIn,
+  } = authFormProps;
   return (
     <section
       className="formCard"
@@ -10,15 +16,19 @@ function AuthForm({ authFormProps }: any) {
       <form
         className="formContent"
       >
-        <label htmlFor="name">
-          <input
-            placeholder="name"
-            value={userData.name}
-            onChange={updateUserData}
-            type="text"
-            name="name"
-          />
-        </label>
+        {
+          isRegister && (
+            <label htmlFor="name">
+              <input
+                placeholder="name"
+                value={userData.name}
+                onChange={updateUserData}
+                type="text"
+                name="name"
+              />
+            </label>
+          )
+        }
         <label htmlFor="email">
           <input
             placeholder="email"
@@ -30,7 +40,7 @@ function AuthForm({ authFormProps }: any) {
         </label>
         <label htmlFor="password">
           <input
-            placeholder="email"
+            placeholder="password"
             value={userData.password}
             onChange={updateUserData}
             type="password"
@@ -42,7 +52,15 @@ function AuthForm({ authFormProps }: any) {
           onClick={handleSignIn}
           type="button"
         >
-          Registrar
+          {isRegister ? 'registrar' : 'entrar'}
+        </button>
+
+        <button
+          className="sumbitBtn"
+          onClick={handleRegisterAndSignIn}
+          type="button"
+        >
+          {isRegister ? 'Já possuo conta' : 'Criar uma conta'}
         </button>
       </form>
       <section
