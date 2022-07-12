@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import AuthForm from '../../Components/Forms/AuthForm/AuthForm';
+import LogoSignIn from '../../Components/Logo/LogoSignIn';
 import { authFormPropTypes, updateUserDataPropTypes, userDataType } from '../../globalTypes/mapStateTypes';
+import './signinStyles.css';
 // import firebase from '../../Services/firebase_connection';
 
 function SignIn() {
@@ -26,7 +28,10 @@ function SignIn() {
   };
 
   return (
-    <section>
+    <section
+      className="signInContainer"
+    >
+      <LogoSignIn />
       <AuthForm
         authFormProps={formProps}
       />

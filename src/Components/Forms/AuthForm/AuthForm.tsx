@@ -1,13 +1,18 @@
 import React from 'react';
+import './AuthForm.css';
 
 function AuthForm({ authFormProps }: any) {
   const { updateUserData, userData, handleSignIn } = authFormProps;
   return (
-    <section>
-      <form>
+    <section
+      className="formCard"
+    >
+      <form
+        className="formContent"
+      >
         <label htmlFor="name">
-          Nome
           <input
+            placeholder="name"
             value={userData.name}
             onChange={updateUserData}
             type="text"
@@ -15,8 +20,8 @@ function AuthForm({ authFormProps }: any) {
           />
         </label>
         <label htmlFor="email">
-          Email
           <input
+            placeholder="email"
             value={userData.email}
             onChange={updateUserData}
             type="email"
@@ -24,8 +29,8 @@ function AuthForm({ authFormProps }: any) {
           />
         </label>
         <label htmlFor="password">
-          Password
           <input
+            placeholder="email"
             value={userData.password}
             onChange={updateUserData}
             type="password"
@@ -33,12 +38,16 @@ function AuthForm({ authFormProps }: any) {
           />
         </label>
         <button
+          className="sumbitBtn"
           onClick={handleSignIn}
           type="button"
         >
           Registrar
         </button>
       </form>
+      <section
+        className="blourContainer"
+      />
     </section>
   );
 }
