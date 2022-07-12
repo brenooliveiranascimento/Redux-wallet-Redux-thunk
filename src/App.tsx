@@ -1,13 +1,15 @@
 import React from 'react';
+import { BrowserRouter, Switch } from 'react-router-dom';
 import './App.css';
+import Routes from './Routes';
 
 function App() {
   return (
-    <div className="App">
-      <h1>
-        Month Maneger
-      </h1>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Routes />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
