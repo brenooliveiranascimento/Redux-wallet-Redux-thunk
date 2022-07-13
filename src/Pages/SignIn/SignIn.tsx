@@ -2,16 +2,19 @@ import React, { useState } from 'react';
 import AuthForm from '../../Components/Forms/AuthForm/AuthForm';
 import LogoSignIn from '../../Components/Logo/LogoSignIn';
 import { authFormPropTypes, updateUserDataPropTypes, userDataType } from '../../globalTypes/mapStateTypes';
+import {
+  emailVerification,
+  passwordVerification,
+} from '../../Services/AuthVerification/authVerification';
 import './signinStyles.css';
-// import firebase from '../../Services/firebase_connection';
 
 function SignIn() {
+  const [isRegister, setIsRegister] = useState<boolean>(false);
   const [userData, setUserData] = useState<userDataType>({
     name: '',
     email: '',
     password: '',
   });
-  const [isRegister, setIsRegister] = useState<boolean>(false);
 
   const updateUserData = ({ target }: updateUserDataPropTypes) => {
     const { value, name } = target;
@@ -20,7 +23,13 @@ function SignIn() {
     setUserData(updateData);
   };
 
-  const handleSignIn = () => console.log('logou');
+  const handleSignIn = async () => {
+    const { email, password } = userData;
+    if (emailVerification(email) && passwordVerification(password)) {
+      return;
+    }
+    alert('não apto');
+  };
 
   const formProps: authFormPropTypes = {
     updateUserData,
