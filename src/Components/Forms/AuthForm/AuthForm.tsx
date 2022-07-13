@@ -20,6 +20,7 @@ function AuthForm({ authFormProps }: any) {
           isRegister && (
             <label htmlFor="name">
               <input
+                data-testId="name-input"
                 placeholder="name"
                 value={userData.name}
                 onChange={updateUserData}
@@ -31,6 +32,7 @@ function AuthForm({ authFormProps }: any) {
         }
         <label htmlFor="email">
           <input
+            data-testId="email-input"
             placeholder="email"
             value={userData.email}
             onChange={updateUserData}
@@ -40,6 +42,7 @@ function AuthForm({ authFormProps }: any) {
         </label>
         <label htmlFor="password">
           <input
+            data-testId="password-input"
             placeholder="password"
             value={userData.password}
             onChange={updateUserData}
@@ -48,6 +51,7 @@ function AuthForm({ authFormProps }: any) {
           />
         </label>
         <button
+          data-testId="signin-btn"
           className="sumbitBtn"
           onClick={handleSignIn}
           type="button"
@@ -56,6 +60,7 @@ function AuthForm({ authFormProps }: any) {
         </button>
 
         <button
+          data-testId="register-btn"
           className="sumbitBtn"
           onClick={handleRegisterAndSignIn}
           type="button"
