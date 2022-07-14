@@ -7,7 +7,7 @@ import App from '../App';
 describe('Test Auth Screen', () => {
   it('exist a email input in screen', () => {
     render(<App />);
-    const inputEmail = screen.getByTestId('email-input');
+    const inputEmail = screen.getByTestId('name-input');
     expect(inputEmail).toBeInTheDocument();
     expect(inputEmail).toHaveProperty('type', 'email');
   });
