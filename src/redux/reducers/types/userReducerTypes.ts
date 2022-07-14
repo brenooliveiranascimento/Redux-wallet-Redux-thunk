@@ -1,8 +1,10 @@
 interface expensesTypes {
-  data: string
-  value: number,
-  type: string,
-  currentCoin: string
+  data: string;
+  value: number;
+  type: string;
+  currentCoin: string;
+  error: string;
+  loading: boolean;
 }
 
 export interface stateTypes {
@@ -13,9 +15,13 @@ export interface stateTypes {
     balance: number
     expenses: Array<expensesTypes> | Array<object>
   }
+  error: string;
+  loading: boolean;
 }
 
 export interface actionTypes {
   type: string,
-  payload: object,
+  userData: any,
+  error: string;
+  loading: boolean;
 }

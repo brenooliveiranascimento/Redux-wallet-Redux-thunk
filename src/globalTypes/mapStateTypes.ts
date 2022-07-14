@@ -8,10 +8,8 @@ export interface dispatchTypes {
 }
 
 export interface updateUserDataPropTypes {
-  target: {
     value: string,
     name: string,
-  }
 }
 
 export interface userDataType {
