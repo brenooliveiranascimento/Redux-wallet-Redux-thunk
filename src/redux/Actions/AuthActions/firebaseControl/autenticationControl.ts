@@ -38,3 +38,23 @@ export const createUserAccountInStore = async (email: string, password: string) 
     alert(error.message);
   }
 };
+
+export const signInUser = async (email: string, password: string) => {
+  try {
+    const signIn = await firebase.auth()
+      .signInWithEmailAndPassword(email, password);
+    return await signIn;
+  } catch (error) {
+    alert(error);
+  }
+};
+
+export const getUserDataInDataBase = async (userData: any) => {
+  try {
+    const fetchUserData = await firebase.firestore()
+      .collection('user').doc(userData.uid).get();
+    return await fetchUserData.data();
+  } catch (error: any) {
+    console.log(error.message);
+  }
+};

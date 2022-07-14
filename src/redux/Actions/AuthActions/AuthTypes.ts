@@ -1,6 +1,7 @@
 export const FETCH_USER_DATA = 'FETCH_USER_DATA';
 export const FETCH_USER_SUCCESS = 'SUCCESS_USER_SUCCESS';
 export const FETCH_USER_FAILURE = 'FETCH_USER_FAILURE';
+export const SIGNIN_USER = 'SIGNIN_USER';
 
 export interface userDataModules {
   name: string;
@@ -28,4 +29,10 @@ export interface fetchUserFailure extends actionDataTypes {
   type: typeof FETCH_USER_FAILURE
 }
 
+export interface signInUser extends actionDataTypes {
+  type: typeof SIGNIN_USER
+}
+
 export type fetchUserTypes = fetchUserData | fetchUserSuccess | fetchUserFailure;
+
+export type signInUserTypes = signInUser | fetchUserSuccess | fetchUserFailure | fetchUserData

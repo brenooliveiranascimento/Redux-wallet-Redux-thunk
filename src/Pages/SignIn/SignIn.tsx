@@ -21,10 +21,22 @@ function SignIn() {
     setUserData(updateData);
   };
 
+  const registerUser = ({ email, password, name }: userDataType) => {
+    dispatch(createUserAccount(email, password, name));
+  };
+
+  // const signInUser = (email: string, password: string) => {
+  //   dispatch(signInUserWithEmailEndPassword(email, password));
+  // };
+
   const handleSignIn = async () => {
-    const { email, password, name } = userData;
+    const { email, password } = userData;
     if (emailVerification(email) && passwordVerification(password)) {
-      dispatch(createUserAccount(email, password, name));
+      if (isRegister) {
+        registerUser(userData);
+        // return;
+      }
+      // signInUser(email, password);
     }
   };
 
@@ -32,6 +44,8 @@ function SignIn() {
     setUserData({ name: '', email: '', password: '' });
     setIsRegister(!isRegister);
   };
+
+  // const signUser = ({ email, password }) => {};
 
   const formProps: authFormPropTypes = {
     updateUserData,
