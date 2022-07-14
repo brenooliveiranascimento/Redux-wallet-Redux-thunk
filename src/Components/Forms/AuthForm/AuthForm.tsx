@@ -22,7 +22,7 @@ function AuthForm({ authFormProps }: any) {
               <input
                 placeholder="name"
                 value={userData.name}
-                onChange={updateUserData}
+                onChange={(e) => updateUserData(e.target)}
                 type="text"
                 name="name"
               />
@@ -33,7 +33,7 @@ function AuthForm({ authFormProps }: any) {
           <input
             placeholder="email"
             value={userData.email}
-            onChange={updateUserData}
+            onChange={(e) => updateUserData(e.target)}
             type="email"
             name="email"
           />
@@ -42,7 +42,7 @@ function AuthForm({ authFormProps }: any) {
           <input
             placeholder="password"
             value={userData.password}
-            onChange={updateUserData}
+            onChange={(e) => updateUserData(e.target)}
             type="password"
             name="password"
           />

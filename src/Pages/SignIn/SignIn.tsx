@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import AuthForm from '../../Components/Forms/AuthForm/AuthForm';
 import LogoSignIn from '../../Components/Logo/LogoSignIn';
 import { authFormPropTypes, updateUserDataPropTypes, userDataType } from '../../globalTypes/mapStateTypes';
+import { createUserAccount } from '../../redux/Actions/AuthActions/authActions';
 import {
   emailVerification,
   passwordVerification,
@@ -9,26 +11,28 @@ import {
 import './signinStyles.css';
 
 function SignIn() {
+  const dispatch = useDispatch();
   const [isRegister, setIsRegister] = useState<boolean>(false);
-  const [userData, setUserData] = useState<userDataType>({
-    name: '',
-    email: '',
-    password: '',
-  });
+  const [userData, setUserData] = useState<userDataType>({ name: '', email: '', password: '' });
 
-  const updateUserData = ({ target }: updateUserDataPropTypes) => {
-    const { value, name } = target;
+  const updateUserData = ({ value, name }: updateUserDataPropTypes) => {
     const updateData = structuredClone(userData);
     updateData[name] = value;
-    setUserData(updateData);
+    setUserData(userData);
   };
 
   const handleSignIn = async () => {
-    const { email, password } = userData;
+    const { email, password, name } = userData;
     if (emailVerification(email) && passwordVerification(password)) {
+      dispatch(createUserAccount(email, password, name));
       return;
     }
-    alert('não apto');
+    console.log('email ou senha invalidos');
+  };
+
+  const clearInputsAndChangeAuthState = () => {
+    setUserData({ name: '', email: '', password: '' });
+    setIsRegister(!isRegister);
   };
 
   const formProps: authFormPropTypes = {
@@ -36,7 +40,7 @@ function SignIn() {
     userData,
     handleSignIn,
     isRegister,
-    handleRegisterAndSignIn: () => setIsRegister(!isRegister),
+    handleRegisterAndSignIn: () => clearInputsAndChangeAuthState(),
   };
 
   return (
