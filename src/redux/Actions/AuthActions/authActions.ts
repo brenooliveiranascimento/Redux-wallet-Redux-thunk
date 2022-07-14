@@ -3,54 +3,26 @@
 import { Dispatch } from 'react';
 
 import {
-  FETCH_USER_DATA,
-  FETCH_USER_SUCCESS,
-  FETCH_USER_FAILURE,
   fetchUserTypes,
-  SIGNIN_USER,
   signInUserTypes,
 } from './AuthTypes';
 
 import {
   createUserAccountInStore,
   createUserData,
+  getUserDataInDataBase,
   signInUser,
 } from './firebaseControl/autenticationControl';
-
-export const fetchUserData = (): fetchUserTypes => ({
-  type: FETCH_USER_DATA,
-  loading: true,
-  error: '',
-  userData: {},
-});
-
-export const signInUserSuccess = (userData: any): signInUserTypes => ({
-  type: SIGNIN_USER,
-  loading: false,
-  error: '',
-  userData,
-});
-
-export const fetchUserSuccsess = (userData: any): fetchUserTypes => ({
-  type: FETCH_USER_SUCCESS,
-  loading: false,
-  error: '',
-  userData,
-});
-
-export const fetchUserFailure = (errorMessage: string): fetchUserTypes => ({
-  type: FETCH_USER_FAILURE,
-  loading: false,
-  error: errorMessage,
-  userData: {},
-});
+import {
+  fetchUserDataInit, fetchUserFailure, fetchUserSuccsess, signInUserFailure, signInUserInit, signInUserSuccess,
+} from './genericActions';
 
 export const createUserAccount = (email: string, password: string, name: string): any => {
   return async (dispatch: Dispatch<fetchUserTypes>) => {
-    dispatch(fetchUserData());
+    dispatch(fetchUserDataInit());
     try {
-      const getUserDataInDataBase = await createUserAccountInStore(email, password);
-      const userData = await createUserData(getUserDataInDataBase?.user, name);
+      const getUserInfInDataBase = await createUserAccountInStore(email, password);
+      const userData = await createUserData(getUserInfInDataBase?.user, name);
       await dispatch(fetchUserSuccsess(userData));
     } catch (error: any) {
       dispatch(fetchUserFailure(error.message));
@@ -58,15 +30,28 @@ export const createUserAccount = (email: string, password: string, name: string)
   };
 };
 
-export const signInUserWithEmailEndPassword = (email: string, password: string) => {
+export const signInUserWithEmailEndPassword = (email: string, password: string): any => {
   return async (dispatch: Dispatch<signInUserTypes>) => {
-    dispatch(fetchUserData());
+    dispatch(signInUserInit());
     try {
       const signIn = await signInUser(email, password);
-      const userData = signIn?.user;
-      dispatch(signInUserSuccess(userData));
+      const userData = getUserDataInDataBase(signIn?.user);
+      await dispatch(signInUserSuccess(userData));
     } catch (error: any) {
-      dispatch(fetchUserFailure(error.message));
+      dispatch(signInUserFailure(error.message));
     }
   };
 };
+
+// export const signInUserWithEmailEndPassword = (email: string, password: string): any => {
+//   return async (dispatch: Dispatch<signInUserTypes>) => {
+//     dispatch(signInUserInit());
+//     try {
+//       const signIn = await signInUser(email, password);
+//       const userData = signIn?.user;
+//       await dispatch(signInUserSuccess(userData));
+//     } catch (error: any) {
+//       dispatch(signInUserFailure(error.message));
+//     }
+//   };
+// };

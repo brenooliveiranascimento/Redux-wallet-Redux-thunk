@@ -44,15 +44,16 @@ export const signInUser = async (email: string, password: string) => {
     const signIn = await firebase.auth()
       .signInWithEmailAndPassword(email, password);
     return await signIn;
-  } catch (error) {
-    alert(error);
+  } catch (error: any) {
+    alert(error.message);
   }
 };
 
 export const getUserDataInDataBase = async (userData: any) => {
   try {
     const fetchUserData = await firebase.firestore()
-      .collection('user').doc(userData.uid).get();
+      .collection('users').doc(userData.uid).get();
+    saveUserInStore(fetchUserData.data());
     return await fetchUserData.data();
   } catch (error: any) {
     console.log(error.message);

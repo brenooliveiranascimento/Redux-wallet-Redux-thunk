@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import AuthForm from '../../Components/Forms/AuthForm/AuthForm';
 import LogoSignIn from '../../Components/Logo/LogoSignIn';
 import { authFormPropTypes, updateUserDataPropTypes, userDataType } from '../../globalTypes/mapStateTypes';
-import { createUserAccount } from '../../redux/Actions/AuthActions/authActions';
+import { createUserAccount, signInUserWithEmailEndPassword } from '../../redux/Actions/AuthActions/authActions';
 import {
   emailVerification,
   passwordVerification,
@@ -25,18 +25,18 @@ function SignIn() {
     dispatch(createUserAccount(email, password, name));
   };
 
-  // const signInUser = (email: string, password: string) => {
-  //   dispatch(signInUserWithEmailEndPassword(email, password));
-  // };
+  const signInUser = (email: string, password: string) => {
+    dispatch(signInUserWithEmailEndPassword(email, password));
+  };
 
   const handleSignIn = async () => {
     const { email, password } = userData;
     if (emailVerification(email) && passwordVerification(password)) {
       if (isRegister) {
         registerUser(userData);
-        // return;
+        return;
       }
-      // signInUser(email, password);
+      signInUser(email, password);
     }
   };
 
