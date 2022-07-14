@@ -10,29 +10,31 @@ export const saveUserInStore = (userData: any) => localStorage.setItem(NOW_USER,
 const getLocalUSer: any = localStorage.getItem(NOW_USER);
 export const getUserData = () => JSON.parse(getLocalUSer);
 
+const mountUserObj = (userData: any, name: string): userDataModules => ({
+  uid: userData.uid,
+  email: userData.email,
+  name,
+  balance: 0,
+  expenses: [],
+});
+
 export const createUserData = async (userData: any, name: string) => {
   try {
-    const userInf: userDataModules = {
-      uid: userData.uid,
-      email: userData.email,
-      name,
-      balance: 0,
-      expenses: [],
-    };
-    await firebase.firestore().collection('users').doc(userData.uid).set(userInf);
+    await firebase.firestore().collection('users')
+      .doc(userData.uid).set(mountUserObj(userData, name));
     await saveUserInStore(userData);
-    return userInf;
+    return mountUserObj(userData, name);
   } catch (error: any) {
-    console.log(error.message);
+    alert(error.message);
   }
 };
 
 export const createUserAccountInStore = async (email: string, password: string) => {
   try {
-    const createAccount = await firebase.auth().createUserWithEmailAndPassword(email, password);
+    const createAccount = await firebase.auth()
+      .createUserWithEmailAndPassword(email, password);
     return createAccount;
-    // await createUserData(createAccount.user, name);
   } catch (error: any) {
-    console.log(error.message);
+    alert(error.message);
   }
 };

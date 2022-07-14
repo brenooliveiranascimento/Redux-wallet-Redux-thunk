@@ -18,16 +18,14 @@ function SignIn() {
   const updateUserData = ({ value, name }: updateUserDataPropTypes) => {
     const updateData = structuredClone(userData);
     updateData[name] = value;
-    setUserData(userData);
+    setUserData(updateData);
   };
 
   const handleSignIn = async () => {
     const { email, password, name } = userData;
     if (emailVerification(email) && passwordVerification(password)) {
       dispatch(createUserAccount(email, password, name));
-      return;
     }
-    console.log('email ou senha invalidos');
   };
 
   const clearInputsAndChangeAuthState = () => {
