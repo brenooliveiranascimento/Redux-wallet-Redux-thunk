@@ -19,43 +19,27 @@ const mountUserObj = (userData: any, name: string): userDataModules => ({
 });
 
 export const createUserData = async (userData: any, name: string) => {
-  try {
-    await firebase.firestore().collection('users')
-      .doc(userData.uid).set(mountUserObj(userData, name));
-    await saveUserInStore(userData);
-    return mountUserObj(userData, name);
-  } catch (error: any) {
-    alert(error.message);
-  }
+  await firebase.firestore().collection('users')
+    .doc(userData.uid).set(mountUserObj(userData, name));
+  await saveUserInStore(userData);
+  return mountUserObj(userData, name);
 };
 
 export const createUserAccountInStore = async (email: string, password: string) => {
-  try {
-    const createAccount = await firebase.auth()
-      .createUserWithEmailAndPassword(email, password);
-    return createAccount;
-  } catch (error: any) {
-    alert(error.message);
-  }
+  const createAccount = await firebase.auth()
+    .createUserWithEmailAndPassword(email, password);
+  return createAccount;
 };
 
 export const signInUser = async (email: string, password: string) => {
-  try {
-    const signIn = await firebase.auth()
-      .signInWithEmailAndPassword(email, password);
-    return await signIn;
-  } catch (error: any) {
-    alert(error.message);
-  }
+  const signIn = await firebase.auth()
+    .signInWithEmailAndPassword(email, password);
+  return signIn;
 };
 
 export const getUserDataInDataBase = async (userData: any) => {
-  try {
-    const fetchUserData = await firebase.firestore()
-      .collection('users').doc(userData.uid).get();
-    saveUserInStore(fetchUserData.data());
-    return await fetchUserData.data();
-  } catch (error: any) {
-    console.log(error.message);
-  }
+  const fetchUserData = await firebase.firestore()
+    .collection('users').doc(userData.uid).get();
+  saveUserInStore(fetchUserData.data());
+  return fetchUserData.data();
 };

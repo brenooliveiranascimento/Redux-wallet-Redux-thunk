@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import AuthForm from '../../Components/Forms/AuthForm/AuthForm';
 import LogoSignIn from '../../Components/Logo/LogoSignIn';
 import { authFormPropTypes, updateUserDataPropTypes, userDataType } from '../../globalTypes/mapStateTypes';
@@ -12,6 +12,7 @@ import './signinStyles.css';
 
 function SignIn() {
   const dispatch = useDispatch();
+  const loading = useSelector((state: any) => state.userReducer.loading);
   const [isRegister, setIsRegister] = useState<boolean>(false);
   const [userData, setUserData] = useState<userDataType>({ name: '', email: '', password: '' });
 
@@ -63,9 +64,15 @@ function SignIn() {
         className="container"
       >
         <LogoSignIn />
-        <AuthForm
-          authFormProps={formProps}
-        />
+        {
+          loading ? (
+            <h1>Carregando....</h1>
+          ) : (
+            <AuthForm
+              authFormProps={formProps}
+            />
+          )
+        }
       </section>
     </section>
   );

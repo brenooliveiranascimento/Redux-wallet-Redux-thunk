@@ -35,23 +35,10 @@ export const signInUserWithEmailEndPassword = (email: string, password: string):
     dispatch(signInUserInit());
     try {
       const signIn = await signInUser(email, password);
-      const userData = getUserDataInDataBase(signIn?.user);
+      const userData = await getUserDataInDataBase(signIn?.user);
       await dispatch(signInUserSuccess(userData));
     } catch (error: any) {
       dispatch(signInUserFailure(error.message));
     }
   };
 };
-
-// export const signInUserWithEmailEndPassword = (email: string, password: string): any => {
-//   return async (dispatch: Dispatch<signInUserTypes>) => {
-//     dispatch(signInUserInit());
-//     try {
-//       const signIn = await signInUser(email, password);
-//       const userData = signIn?.user;
-//       await dispatch(signInUserSuccess(userData));
-//     } catch (error: any) {
-//       dispatch(signInUserFailure(error.message));
-//     }
-//   };
-// };
