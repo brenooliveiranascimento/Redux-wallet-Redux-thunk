@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const HeaderWalletContainer = styled.header`
-  width: 85%;
+  width: 90%;
   height: 8rem;
   padding: 20px;
   margin: 20px;

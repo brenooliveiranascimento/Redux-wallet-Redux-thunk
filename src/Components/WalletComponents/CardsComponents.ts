@@ -14,7 +14,7 @@ export const CardMainContainer = styled.section`
   color: #fff;
 
   h1 {
-    color: #fff;
+    color: white;
     font-weight: 900;
     font-size: 40px;
     margin-top: 0px;
