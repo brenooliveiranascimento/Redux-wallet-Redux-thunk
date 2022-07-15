@@ -29,7 +29,6 @@ const INITIAL_VALUE_ACTION: actionTypes = {
 };
 
 function userReducer(state = INITIAL_VALUE, action = INITIAL_VALUE_ACTION) {
-  console.log(state);
   switch (action.type) {
     case FETCH_USER_DATA:
       return { ...state, loading: action.loading };
@@ -42,7 +41,7 @@ function userReducer(state = INITIAL_VALUE, action = INITIAL_VALUE_ACTION) {
     case SIGNIN_USER:
       return { ...state, loading: action.loading, userData: action.userData };
     case SIGNIN_USER_FAILURE:
-      return { ...state, localStorage: action.loading };
+      return { ...state, loading: action.loading };
     case SIGNOUT_USER:
       return { ...state, userData: action.userData };
     default:
