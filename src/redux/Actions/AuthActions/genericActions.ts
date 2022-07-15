@@ -7,6 +7,7 @@ import {
   SIGNIN_USER,
   SIGNIN_USER_FAILURE,
   SIGNIN_USER_INIT,
+  SIGNOUT_USER,
 } from './AuthTypes';
 
 export const fetchUserDataInit = (): fetchUserTypes => ({
@@ -49,4 +50,15 @@ export const fetchUserFailure = (errorMessage: string): fetchUserTypes => ({
   loading: false,
   error: errorMessage,
   userData: {},
+});
+
+export const signOut = () => ({
+  type: SIGNOUT_USER,
+  userData: {
+    name: '',
+    email: '',
+    uid: '',
+    balance: 0,
+    expenses: [],
+  },
 });
