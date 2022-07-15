@@ -39,7 +39,7 @@ function userReducer(state = INITIAL_VALUE, action = INITIAL_VALUE_ACTION) {
     case SIGNIN_USER_INIT:
       return { ...state, loading: action.loading };
     case SIGNIN_USER:
-      return { ...state, loading: action.loading, userDada: action.userData };
+      return { ...state, loading: action.loading, userData: action.userData };
     case SIGNIN_USER_FAILURE:
       return { ...state, localStorage: action.loading };
     default:

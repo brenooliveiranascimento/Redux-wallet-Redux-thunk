@@ -1,12 +1,14 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import AppRoutes from './AppRoutes/AppRoutes';
+import AuthRoutes from './AuthRoutes/AuthRoutes';
 
-class Routes extends React.Component {
-  render() {
-    return (
-      <AppRoutes />
-    );
-  }
+function Routes() {
+  const userData = useSelector((state: any) => state.userReducer.userData.name).length;
+
+  return (
+    userData === 0 ? <AuthRoutes /> : <AppRoutes />
+  );
 }
 
 export default Routes;
