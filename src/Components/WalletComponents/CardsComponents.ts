@@ -28,6 +28,14 @@ export const CardMainContainer = styled.section`
     width: 185px;
     height: 6rem;
     align-self: flex-start;
+
+    h1 {
+      font-size: 30px;
+    }
+
+    span {
+      margin-top: -40px;
+    }
   }
 `;
 

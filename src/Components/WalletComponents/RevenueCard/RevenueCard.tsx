@@ -1,16 +1,16 @@
 import React from 'react';
 import { CardMainContainer } from '../CardsComponents';
 
-function BalanceCard() {
-  const colorCard: string = '#5338BF';
+function RevenueCard() {
+  const colorCard: string = '#00B94A';
   return (
     <CardMainContainer
       color={colorCard}
     >
-      <h1>Total Balance</h1>
+      <h1>Total revenue</h1>
       <span>R$</span>
     </CardMainContainer>
   );
 }
 
-export default BalanceCard;
+export default RevenueCard;
