@@ -14,7 +14,12 @@ import {
   signInUser,
 } from './firebaseControl/autenticationControl';
 import {
-  fetchUserDataInit, fetchUserFailure, fetchUserSuccsess, signInUserFailure, signInUserInit, signInUserSuccess,
+  fetchUserDataInit,
+  fetchUserFailure,
+  fetchUserSuccsess,
+  signInUserFailure,
+  signInUserInit,
+  signInUserSuccess,
 } from './genericActions';
 
 export const createUserAccount = (email: string, password: string, name: string): any => {
