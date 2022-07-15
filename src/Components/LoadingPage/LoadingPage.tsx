@@ -7,7 +7,7 @@ function LoadingPage() {
       className="containerLoading"
     >
       <h1>
-        Carregando...
+        Carregando.....
       </h1>
     </section>
   );
