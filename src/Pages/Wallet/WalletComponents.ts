@@ -32,7 +32,7 @@ export const CardsArea = styled.article`
   justify-content: flex-start;
 `;
 
-export const ReleasesList = styled.section`
+export const ReleasesListArea = styled.section`
   width: 90%;
   height: auto;
   flex-wrap: wrap;

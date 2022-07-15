@@ -3,7 +3,7 @@ import BalanceCard from '../../Components/WalletComponents/BalancesCard/BalanceC
 import ExpensesCard from '../../Components/WalletComponents/ExpensesCard/ExpensesCard';
 import HeaderWallet from '../../Components/WalletComponents/HeaderWallet/HeaderWallet';
 import RevenueCard from '../../Components/WalletComponents/RevenueCard/RevenueCard';
-import { CardsArea, ReleasesList, MainWallet } from './WalletComponents';
+import { CardsArea, ReleasesListArea, MainWallet } from './WalletComponents';
 
 function Wallet() {
   return (
@@ -15,9 +15,9 @@ function Wallet() {
         <ExpensesCard />
         <BalanceCard />
       </CardsArea>
-      <ReleasesList>
+      <ReleasesListArea>
         <span>dmawoidw</span>
-      </ReleasesList>
+      </ReleasesListArea>
     </MainWallet>
   );
 }
