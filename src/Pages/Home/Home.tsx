@@ -1,7 +1,9 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import SideBar from '../../Components/SideBar/SideBar';
 import { signOutUser } from '../../redux/Actions/AuthActions/firebaseControl/autenticationControl';
 import { signOut } from '../../redux/Actions/AuthActions/genericActions';
+import { ContainerHome } from './HomeStyles';
 
 function Home() {
   const dispatch = useDispatch();
@@ -12,17 +14,15 @@ function Home() {
   };
 
   return (
-    <section>
-      <h1>
-        Area de Home
-      </h1>
+    <ContainerHome>
+      <SideBar />
       <button
-        type="button"
         onClick={userSignOut}
+        type="button"
       >
-        SignOut
+        Sair
       </button>
-    </section>
+    </ContainerHome>
   );
 }
 
