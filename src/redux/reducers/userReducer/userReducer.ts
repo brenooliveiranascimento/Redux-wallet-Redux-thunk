@@ -6,6 +6,7 @@ import {
   SIGNIN_USER_INIT,
   SIGNIN_USER,
   SIGNIN_USER_FAILURE,
+  SIGNOUT_USER,
 } from '../../Actions/AuthActions/AuthTypes';
 
 const INITIAL_VALUE: stateTypes = {
@@ -42,6 +43,8 @@ function userReducer(state = INITIAL_VALUE, action = INITIAL_VALUE_ACTION) {
       return { ...state, loading: action.loading, userData: action.userData };
     case SIGNIN_USER_FAILURE:
       return { ...state, localStorage: action.loading };
+    case SIGNOUT_USER:
+      return { ...state, userData: action.userData };
     default:
       return state;
   }

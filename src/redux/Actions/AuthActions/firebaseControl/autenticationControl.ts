@@ -43,3 +43,7 @@ export const getUserDataInDataBase = async (userData: any) => {
   saveUserInStore(fetchUserData.data());
   return fetchUserData.data();
 };
+
+export const signOutUser = () => {
+  firebase.auth().signOut();
+};

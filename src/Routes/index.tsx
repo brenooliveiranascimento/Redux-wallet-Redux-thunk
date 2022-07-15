@@ -22,7 +22,7 @@ function Routes() {
 
   useEffect((): any => {
     if (userIsLoggedIn()) signIn();
-    setTimeout(() => setLoading(false), 500);
+    setTimeout(() => setLoading(false), 600);
   }, []);
 
   if (loading) {
