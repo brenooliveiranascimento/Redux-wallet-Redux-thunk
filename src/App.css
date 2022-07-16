@@ -28,6 +28,10 @@
   color: #61dafb;
 }
 
+span {
+  color: #fff;
+}
+
 button {
   border: none;
 }

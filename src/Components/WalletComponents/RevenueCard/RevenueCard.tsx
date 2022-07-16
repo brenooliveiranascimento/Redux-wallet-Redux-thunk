@@ -2,7 +2,7 @@ import React from 'react';
 import { CardMainContainer } from '../CardsComponents';
 
 function RevenueCard() {
-  const colorCard: string = '#00B94A';
+  const colorCard: string = '#0C602D';
   return (
     <CardMainContainer
       color={colorCard}

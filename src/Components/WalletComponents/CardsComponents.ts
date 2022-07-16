@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CardMainContainer = styled.section`
-  width: 390px;
+  width: 380px;
   height: 6rem;
   border-radius: 20px;
   margin-right: 20px;
@@ -20,7 +20,7 @@ export const CardMainContainer = styled.section`
     margin-top: 0px;
   }
   span {
-    color: #fff;
+    color: white;
     margin-top: -50px;
   }
 

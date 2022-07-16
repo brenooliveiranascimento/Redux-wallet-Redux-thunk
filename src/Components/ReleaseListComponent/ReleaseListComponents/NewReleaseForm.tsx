@@ -54,15 +54,6 @@ function NewReleaseForm() {
           type="date"
         />
       </LabelForm>
-      <LabelForm>
-        Type
-        <select
-          name="type"
-        >
-          <option>Revenue</option>
-          <option>Expense</option>
-        </select>
-      </LabelForm>
       <FormButtonAdd>
         <span>Add</span>
       </FormButtonAdd>
