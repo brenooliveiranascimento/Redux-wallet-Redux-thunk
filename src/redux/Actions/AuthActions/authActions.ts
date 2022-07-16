@@ -47,3 +47,5 @@ export const signInUserWithEmailEndPassword = (email: string, password: string):
     }
   };
 };
+
+// export const getWalletInDataBase = () =>

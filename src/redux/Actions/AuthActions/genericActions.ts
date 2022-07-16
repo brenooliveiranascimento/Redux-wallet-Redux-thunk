@@ -1,3 +1,4 @@
+import { FETCH_WALLET_DATA, FETCH_WALLET_FAILURE, FETCH_WALLET_SUCCESS } from '../WalletActions/walletTypes';
 import {
   fetchUserTypes,
   FETCH_USER_DATA,
@@ -61,4 +62,32 @@ export const signOut = () => ({
     balance: 0,
     expenses: [],
   },
+});
+
+export const getWalletDataInit = () => ({
+  type: FETCH_WALLET_DATA,
+  payLoad: [],
+  loading: true,
+  error: '',
+});
+
+// export const getWalletDataSuccess = (data: any) => ({
+//   type: FETCH_WALLET_SUCCESS,
+//   payLoad: data.wallet,
+//   loading: false,
+//   error: '',
+// });
+
+export const getWalletDataSuccess = (walletInf: any) => ({
+  type: FETCH_WALLET_SUCCESS,
+  payLoad: walletInf,
+  loading: false,
+  error: '',
+});
+
+export const getWalletFail = () => ({
+  type: FETCH_WALLET_FAILURE,
+  payLoad: [],
+  loading: true,
+  error: 'Algo de errado não está certo',
 });
