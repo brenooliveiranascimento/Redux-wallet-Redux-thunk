@@ -16,7 +16,6 @@ const INITIAL_VALUE_ACTION: actionTypes = {
 };
 
 function manegerReducer(state = INITIAL_VALUE, action = INITIAL_VALUE_ACTION) {
-  console.log(action);
   switch (action.type) {
     case FETCH_WALLET_DATA:
       return { ...state, loading: action.loading };
