@@ -28,6 +28,34 @@
   color: #61dafb;
 }
 
+button {
+  border: none;
+}
+
+th, td {
+  color: aliceblue;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+  background-color: #35286b;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: start;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,6 +63,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h1 {
+  color: white;
+}
+
+input {
+  border: none;
 }
 
 .LinksSideBar {

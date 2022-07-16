@@ -10,6 +10,13 @@ export const HeaderWalletContainer = styled.header`
   align-items: center;
   justify-content: center;
   margin-left: -17px;
+
+  @media screen and (max-width: 900px){
+    margin-top: 10rem;
+    height: 6rem;
+    margin-left: 0px;
+    width: 85%;
+  }
 `;
 
 export const UserInf = styled.form`

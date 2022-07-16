@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const CardMainContainer = styled.section`
-  width: 430px;
+  width: 390px;
   height: 6rem;
   border-radius: 20px;
-  margin-right: 10px;
+  margin-right: 20px;
   margin-top: 10px;
   background-color: ${({ color }: any) => color};
   align-items: flex-start;
@@ -25,12 +25,13 @@ export const CardMainContainer = styled.section`
   }
 
   @media screen and (max-width: 900px){
-    width: 185px;
+    width: 160px;
     height: 6rem;
     align-self: flex-start;
 
     h1 {
       font-size: 30px;
+      color: #fff;
     }
 
     span {
