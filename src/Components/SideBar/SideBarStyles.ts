@@ -18,9 +18,13 @@ export const SideContent = styled.aside`
     margin-bottom: 100px;
   }
 
+  @media screen and (max-width: 1200px){
+   width: 30%;
+  }
+
   @media screen and (max-width: 900px){
     flex-direction: column;
-    height: 19vh;
+    height: 12vh;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -46,7 +50,7 @@ export const SideButton = styled.button`
   align-items: center;
   justify-content: flex-start;
   font-size: 25px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.2rem;
   padding-left: 15px;
   h3 {
     margin-left: 10px;
@@ -60,10 +64,9 @@ export const SideButton = styled.button`
   @media screen and (max-width: 900px){
     width: 100%;
     height: 50px;
-    margin-right: 50px;
     font-size: 20px;
     padding: 8px ;
-    margin-top: 2rem;
+    margin-top: 1rem;
    h3 {
     font-size: 16px;
     text-align: start;

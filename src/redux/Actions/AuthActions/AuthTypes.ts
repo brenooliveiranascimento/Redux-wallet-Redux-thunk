@@ -12,6 +12,8 @@ export interface userDataModules {
   uid: string;
   balance: number;
   expenses: Array<object>;
+  currencies: Array<object>;
+  monthlyCharges: Array<object>;
 }
 
 export interface authDataModules {

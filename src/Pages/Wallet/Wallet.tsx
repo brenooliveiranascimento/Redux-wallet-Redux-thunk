@@ -1,4 +1,5 @@
 import React from 'react';
+import ReleaseList from '../../Components/ReleaseListComponent/ReleaseListComponent';
 import BalanceCard from '../../Components/WalletComponents/BalancesCard/BalanceCard';
 import ExpensesCard from '../../Components/WalletComponents/ExpensesCard/ExpensesCard';
 import HeaderWallet from '../../Components/WalletComponents/HeaderWallet/HeaderWallet';
@@ -6,6 +7,7 @@ import RevenueCard from '../../Components/WalletComponents/RevenueCard/RevenueCa
 import { CardsArea, ReleasesListArea, MainWallet } from './WalletComponents';
 
 function Wallet() {
+  const prevent = (e: any) => e.preventDefault();
   return (
     <MainWallet>
       <HeaderWallet />
@@ -15,8 +17,10 @@ function Wallet() {
         <ExpensesCard />
         <BalanceCard />
       </CardsArea>
-      <ReleasesListArea>
-        <span>dmawoidw</span>
+      <ReleasesListArea
+        onClick={prevent}
+      >
+        <ReleaseList />
       </ReleasesListArea>
     </MainWallet>
   );

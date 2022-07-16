@@ -38,4 +38,12 @@ export const ReleasesListArea = styled.section`
   flex-wrap: wrap;
   display: flex;
   justify-content: flex-start;
+
+  /* @media screen and (max-width: 1100px){
+    margin-left: -10%
+  }
+
+  @media screen and (max-width: 900px){
+    margin-left: 0%
+  } */
 `;

@@ -7,7 +7,7 @@ export const ContainerHome = styled.main`
   width: 100%;
   background-color: #131216;
   
-  span, h1, h2 {
+  span, h2 {
     color: #aaa;
   }
 `;
