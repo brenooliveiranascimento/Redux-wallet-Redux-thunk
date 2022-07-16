@@ -1,8 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { ValueIndicator } from '../ReleaseListStylesComponents';
 import { FormContainet } from './FormComponents';
-// import { useSelector } from 'react-redux';
 
 function ReleaseListComponent() {
+  const release = useSelector((state:any) => state.manegerReducer.wallet);
   return (
     <FormContainet>
       <table style={{ width: '100%' }}>
@@ -15,21 +17,35 @@ function ReleaseListComponent() {
             <th>Deletar/Excluir</th>
           </tr>
         </thead>
-        <tr>
-          <td>Alfreds </td>
-          <td>Maria Anders</td>
-          <td>Maria Anders</td>
-          <td>Maria Anders</td>
-          <button type="button">Editar</button>
-          <button type="button">deletar</button>
-        </tr>
-        <tr>
-          <td>Centro comercial Moctezuma</td>
-          <td>Francisco Chang</td>
-          <td>Francisco Chang</td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-        </tr>
+        {
+          release.map((releaseItem: any) => (
+            <tr
+              key={releaseItem}
+            >
+              <td>
+                {releaseItem.description}
+              </td>
+              <td>
+                {releaseItem.value}
+                R$
+              </td>
+              <td>
+                <ValueIndicator
+                  color={releaseItem.type === 'Revenue' ? '#0C602D' : '#C62C36'}
+                >
+                  <span>
+                    {releaseItem.type}
+                  </span>
+                </ValueIndicator>
+              </td>
+              <td>
+                {releaseItem.date}
+              </td>
+              <button type="button">Editar</button>
+              <button type="button">deletar</button>
+            </tr>
+          ))
+        }
       </table>
     </FormContainet>
   );
