@@ -71,13 +71,6 @@ export const getWalletDataInit = () => ({
   error: '',
 });
 
-// export const getWalletDataSuccess = (data: any) => ({
-//   type: FETCH_WALLET_SUCCESS,
-//   payLoad: data.wallet,
-//   loading: false,
-//   error: '',
-// });
-
 export const getWalletDataSuccess = (walletInf: any) => ({
   type: FETCH_WALLET_SUCCESS,
   payLoad: walletInf,
