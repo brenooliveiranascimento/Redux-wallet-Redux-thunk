@@ -91,12 +91,14 @@ export const FormButtonAdd = styled.button`
   font-weight: 700;
   background-color: #5338BF;
   border-radius: 6px;
+  font-size: 20px;
+  color: white;
   @media screen and (max-width: 1600px){
     margin: 0px;
     margin-top: 25px;
   }
   @media screen and (max-width: 900px){
     width: 380px;
-    margin-left: -20px;
+    margin: 50px;
   }
 `;

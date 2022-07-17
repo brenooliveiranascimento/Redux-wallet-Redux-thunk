@@ -1,11 +1,19 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { AiOutlineArrowUp, AiOutlineArrowDown } from 'react-icons/ai';
 import { ValueIndicator } from '../ReleaseListStylesComponents';
 import { FormContainet } from './FormComponents';
+import { removeReleaseInDataBase } from '../../../redux/Actions/WalletActions/walletActions';
 
 function ReleaseListComponent() {
   const release = useSelector((state:any) => state.manegerReducer.wallet);
+  const userData = useSelector(({ userReducer }: any) => userReducer.userData);
+  const dispatch = useDispatch();
+
+  const deletRelease = (releaseSelected: any) => {
+    dispatch(removeReleaseInDataBase(userData, releaseSelected));
+  };
+
   return (
     <FormContainet>
       <table style={{ width: '100%' }}>
@@ -49,8 +57,13 @@ function ReleaseListComponent() {
               <td>
                 {releaseItem.date}
               </td>
-              <button type="button">Editar</button>
-              <button type="button">deletar</button>
+              <button type="button">Edit</button>
+              <button
+                onClick={() => deletRelease(releaseItem)}
+                type="button"
+              >
+                Delete
+              </button>
             </tr>
           ))
         }

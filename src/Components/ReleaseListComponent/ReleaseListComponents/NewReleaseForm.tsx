@@ -90,6 +90,7 @@ function NewReleaseForm() {
           value={releaseData.date}
           onChange={({ target }) => updateReleaseData(target.name, target.value)}
           name="date"
+          placeholder="dd/mm/yy"
         />
         <button
           onClick={getCurrentDate}

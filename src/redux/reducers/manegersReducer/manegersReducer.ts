@@ -2,6 +2,7 @@ import { FETCH_WALLET_DATA, FETCH_WALLET_SUCCESS } from '../../Actions/WalletAct
 import { actionTypes, stateTypes } from '../types/manegerReducerTypes';
 
 const ADD_RELEASE = 'ADD_RELEASE';
+const REMOVE_RELEASE = 'REMOVE_RELEASE';
 
 const INITIAL_VALUE: stateTypes = {
   monthlyPayments: [],
@@ -18,7 +19,6 @@ const INITIAL_VALUE_ACTION: actionTypes = {
 };
 
 function manegerReducer(state = INITIAL_VALUE, action = INITIAL_VALUE_ACTION) {
-  console.log(state.wallet);
   switch (action.type) {
     case FETCH_WALLET_DATA:
       return { ...state, loading: action.loading };
@@ -26,6 +26,12 @@ function manegerReducer(state = INITIAL_VALUE, action = INITIAL_VALUE_ACTION) {
       return { ...state, wallet: action.payLoad, loading: state.loading };
     case ADD_RELEASE:
       return { ...state, wallet: [...state.wallet, action.payLoad] };
+    case REMOVE_RELEASE:
+      return {
+        ...state,
+        wallet: state.wallet
+          .filter(({ releaseDataId }: any) => releaseDataId !== action.payLoad.releaseDataId),
+      };
     default:
       return state;
   }
