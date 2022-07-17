@@ -15,26 +15,24 @@ function NewReleaseForm() {
     type: '',
     description: '',
     details: '',
+    releaseDataId: '',
   });
-  const [checkData, setCheckData] = useState(true);
 
   const verifyFormInputs = () => {
-    if (releaseData.date === '' || releaseData.type === '' || releaseData.description === '') return false;
+    if (releaseData.date === '' || releaseData.type === '' || releaseData.description === '' || releaseData.value === 0) return false;
     return true;
   };
 
   const updateReleaseData = (name: any, value: any) => {
     const cloneReleaseData = structuredClone(releaseData);
     cloneReleaseData[name] = value;
+    const now = new Date();
+    cloneReleaseData.releaseDataId = `${now.getMilliseconds()},${now.getTime()},${now.getMinutes()}`;
     setRealeaseData(cloneReleaseData);
-    if (verifyFormInputs()) {
-      setCheckData(false);
-      return;
-    }
-    setCheckData(true);
   };
 
   const addRelease = async () => {
+    if (!verifyFormInputs()) return;
     dispatch(addReleaseInDataBase(userData, releaseData));
     setRealeaseData({
       value: 0,
@@ -42,12 +40,15 @@ function NewReleaseForm() {
       type: '',
       description: '',
       details: '',
+      releaseDataId: '',
     });
   };
 
   const getCurrentDate = () => {
     const cloneReleaseData = structuredClone(releaseData);
-    cloneReleaseData.date = JSON.stringify(new Date());
+    const now = new Date();
+    const formatedData = `${now.getDate()}/${now.getMonth()}/${now.getFullYear()}`;
+    cloneReleaseData.date = formatedData;
     setRealeaseData(cloneReleaseData);
   };
 
@@ -89,7 +90,6 @@ function NewReleaseForm() {
           value={releaseData.date}
           onChange={({ target }) => updateReleaseData(target.name, target.value)}
           name="date"
-          type="date"
         />
         <button
           onClick={getCurrentDate}
@@ -100,7 +100,6 @@ function NewReleaseForm() {
         </button>
       </LabelForm>
       <FormButtonAdd
-        disabled={checkData}
         onClick={addRelease}
       >
         <span>Add</span>

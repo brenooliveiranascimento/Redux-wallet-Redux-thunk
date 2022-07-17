@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { AiOutlineArrowUp, AiOutlineArrowDown } from 'react-icons/ai';
 import { ValueIndicator } from '../ReleaseListStylesComponents';
 import { FormContainet } from './FormComponents';
 
@@ -36,6 +37,13 @@ function ReleaseListComponent() {
                   <p>
                     {releaseItem.type}
                   </p>
+                  {
+                    releaseItem.type === 'Revenue' ? (
+                      <AiOutlineArrowUp />
+                    ) : (
+                      <AiOutlineArrowDown />
+                    )
+                  }
                 </ValueIndicator>
               </td>
               <td>
