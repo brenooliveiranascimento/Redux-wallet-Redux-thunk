@@ -1,19 +1,19 @@
-interface expensesTypes {
-  data: string;
-  value: number;
-  type: string;
-  currentCoin: string;
-  error: string;
-  loading: boolean;
-}
+// interface expensesTypes {
+//   data: string;
+//   value: number;
+//   type: string;
+//   currentCoin: string;
+//   error: string;
+//   loading: boolean;
+// }
 
 export interface stateTypes {
   userData: {
     name: string
     email: string
     uid: string
-    balance: number
-    expenses: Array<expensesTypes> | Array<object>
+    // balance: number
+    // expenses: Array<expensesTypes> | Array<object>
   }
   error: string;
   loading: boolean;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CardMainContainer = styled.section`
-  width: 390px;
+  width: 380px;
   height: 6rem;
   border-radius: 20px;
   margin-right: 20px;
@@ -19,13 +19,14 @@ export const CardMainContainer = styled.section`
     font-size: 40px;
     margin-top: 0px;
   }
-  span {
-    color: #fff;
-    margin-top: -50px;
+  p {
+    color: white;
+    margin-top: -30px;
+    margin-left: 5px;
   }
 
   @media screen and (max-width: 900px){
-    width: 160px;
+    width: 40%;
     height: 6rem;
     align-self: flex-start;
 

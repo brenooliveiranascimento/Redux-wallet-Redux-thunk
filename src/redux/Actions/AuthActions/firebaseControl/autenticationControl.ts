@@ -15,9 +15,9 @@ const mountUserObj = (userData: any, name: string): userDataModules => ({
   email: userData.email,
   name,
   balance: 0,
-  expenses: [],
+  wallet: [],
   currencies: [],
-  monthlyCharges: [],
+  monthlyPayment: [],
 });
 
 export const createUserData = async (userData: any, name: string) => {

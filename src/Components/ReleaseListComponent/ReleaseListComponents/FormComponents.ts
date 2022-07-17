@@ -12,7 +12,7 @@ export const FormContainet = styled.form`
     color: #fff;
   }
   select {
-    width: 200px;
+    width: 250px;
     height: 40px;
     padding: 10px;
     background-color: #3d3b49;
@@ -43,16 +43,40 @@ export const LabelForm = styled.label`
   justify-content: flex-start;
   margin-right: 20px;
   color: #aaa;
+  font-weight: 600;
+
+  .currentDateBtn {
+    width: 70px;
+    top: -37px;
+    height: 35px;
+    position: relative;
+    align-self: flex-end;
+    background-color: #5338BF;
+    color: white;
+    font-weight: 600;
+  }
+
+  .currentDateBtn:hover {
+    background-color: #2f216b;
+    border:none
+  }
+
+  @media screen and (max-width: 900px){
+    .currentDateBtn {
+    top: -53px;
+  } 
+  }
 `;
 
 export const InputForm = styled.input`
-  width: 190px;
+  width: 250px;
   height: 30px;
   padding: 5px;
   background-color: #3d3b49;
   font-size:18px;
   color: #aaa;
   border-radius: 6px;
+
   @media screen and (max-width: 900px){
     width: 370px;
     margin-bottom: 15px;
@@ -61,17 +85,20 @@ export const InputForm = styled.input`
 
 export const FormButtonAdd = styled.button`
   width: 150px;
-  height: 30px;
+  height: 40px;
   padding: 5px;
-  margin: 25px;
+  margin: 16px;
+  font-weight: 700;
   background-color: #5338BF;
   border-radius: 6px;
+  font-size: 20px;
+  color: white;
   @media screen and (max-width: 1600px){
     margin: 0px;
     margin-top: 25px;
   }
   @media screen and (max-width: 900px){
     width: 380px;
-    margin-left: -10px;
+    margin: 50px;
   }
 `;

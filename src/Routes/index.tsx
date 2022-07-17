@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import LoadingPage from '../Components/LoadingPage/LoadingPage';
 import { getUserData, getUserDataInDataBase } from '../redux/Actions/AuthActions/firebaseControl/autenticationControl';
-import { signInUserSuccess } from '../redux/Actions/AuthActions/genericActions';
+import { getWalletDataSuccess, signInUserSuccess } from '../redux/Actions/AuthActions/genericActions';
 import AppRoutes from './AppRoutes/AppRoutes';
 import AuthRoutes from './AuthRoutes/AuthRoutes';
 
@@ -15,9 +15,15 @@ function Routes() {
 
   const fetchUserData = (userInf: any) => getUserDataInDataBase(userInf);
 
+  const setWallet = async () => {
+    const walletInf: any = await fetchUserData(userIsLoggedIn());
+    await dispatch(getWalletDataSuccess(walletInf.wallet));
+  };
+
   const signIn = async () => {
-    const data = await fetchUserData(userIsLoggedIn());
-    await dispatch(signInUserSuccess(data));
+    const userInf = await fetchUserData(userIsLoggedIn());
+    await dispatch(signInUserSuccess(userInf));
+    setWallet();
   };
 
   useEffect((): any => {

@@ -3,8 +3,8 @@ import manegerReducer from './manegersReducer/manegersReducer';
 import userReducer from './userReducer/userReducer';
 
 const rootReducer = combineReducers({
-  userReducer,
   manegerReducer,
+  userReducer,
 });
 
 export default rootReducer;
