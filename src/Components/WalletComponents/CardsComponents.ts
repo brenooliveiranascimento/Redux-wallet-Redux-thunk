@@ -19,13 +19,14 @@ export const CardMainContainer = styled.section`
     font-size: 40px;
     margin-top: 0px;
   }
-  span {
+  p {
     color: white;
-    margin-top: -50px;
+    margin-top: -30px;
+    margin-left: 5px;
   }
 
   @media screen and (max-width: 900px){
-    width: 160px;
+    width: 40%;
     height: 6rem;
     align-self: flex-start;
 

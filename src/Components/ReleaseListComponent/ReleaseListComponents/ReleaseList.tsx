@@ -33,9 +33,9 @@ function ReleaseListComponent() {
                 <ValueIndicator
                   color={releaseItem.type === 'Revenue' ? '#0C602D' : '#C62C36'}
                 >
-                  <span>
+                  <p>
                     {releaseItem.type}
-                  </span>
+                  </p>
                 </ValueIndicator>
               </td>
               <td>

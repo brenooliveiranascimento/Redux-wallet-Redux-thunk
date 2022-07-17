@@ -30,9 +30,11 @@ export const ValueIndicator = styled.section`
   width: 100px;
   background-color: ${({ color }) => color};
   border-radius: 6px;
-  padding: 5px;
-
-  span {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  p {
     color: #fff;
+    margin-left: 4px;
   }
 `;
