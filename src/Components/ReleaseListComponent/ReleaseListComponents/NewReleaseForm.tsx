@@ -27,7 +27,6 @@ function NewReleaseForm() {
     const cloneReleaseData = structuredClone(releaseData);
     cloneReleaseData[name] = value;
     setRealeaseData(cloneReleaseData);
-    console.log(releaseData);
     if (verifyFormInputs()) {
       setCheckData(false);
       return;
@@ -44,6 +43,12 @@ function NewReleaseForm() {
       description: '',
       details: '',
     });
+  };
+
+  const getCurrentDate = () => {
+    const cloneReleaseData = structuredClone(releaseData);
+    cloneReleaseData.date = JSON.stringify(new Date());
+    setRealeaseData(cloneReleaseData);
   };
 
   return (
@@ -86,6 +91,13 @@ function NewReleaseForm() {
           name="date"
           type="date"
         />
+        <button
+          onClick={getCurrentDate}
+          className="currentDateBtn"
+          type="button"
+        >
+          Current Date
+        </button>
       </LabelForm>
       <FormButtonAdd
         disabled={checkData}

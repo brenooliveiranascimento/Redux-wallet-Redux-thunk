@@ -44,6 +44,28 @@ export const LabelForm = styled.label`
   margin-right: 20px;
   color: #aaa;
   font-weight: 600;
+
+  .currentDateBtn {
+    width: 70px;
+    top: -37px;
+    height: 35px;
+    position: relative;
+    align-self: flex-end;
+    background-color: #5338BF;
+    color: white;
+    font-weight: 600;
+  }
+
+  .currentDateBtn:hover {
+    background-color: #2f216b;
+    border:none
+  }
+
+  @media screen and (max-width: 900px){
+    .currentDateBtn {
+    top: -53px;
+  } 
+  }
 `;
 
 export const InputForm = styled.input`
@@ -54,6 +76,7 @@ export const InputForm = styled.input`
   font-size:18px;
   color: #aaa;
   border-radius: 6px;
+
   @media screen and (max-width: 900px){
     width: 370px;
     margin-bottom: 15px;
