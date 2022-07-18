@@ -9,12 +9,12 @@ function LogoSignIn() {
       <h1
         className="Logo_1"
       >
-        Monthly
+        Redux
       </h1>
       <h1
         className="Logo_2"
       >
-        Maneger
+        Wallet
       </h1>
     </section>
   );

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const MainWallet = styled.main`
-  background-color: #131216;
+  background-color: #313447;
   width: 100%;
   position: inherit;
   height: auto;

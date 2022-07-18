@@ -5,7 +5,7 @@ export const FormContainet = styled.form`
   width: 100%;
   height: auto;
   border: #fff;
-  background-color: #212026;
+  background-color: #1A1B25;
   padding: 20px;
   border-radius: 10px;
   h2 {
@@ -13,12 +13,14 @@ export const FormContainet = styled.form`
   }
   select {
     width: 250px;
+    border-bottom: 1px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
     height: 40px;
     padding: 10px;
-    background-color: #3d3b49;
+    background-color: #1A1B25;
     color: #aaa;
-    border-radius: 6px;
-    border: none;
     font-size:18px;
 
   @media screen and (max-width: 900px){
@@ -44,6 +46,7 @@ export const LabelForm = styled.label`
   margin-right: 20px;
   color: #aaa;
   font-weight: 600;
+  margin-top: 15px;
 
   .currentDateBtn {
     width: 70px;
@@ -51,7 +54,7 @@ export const LabelForm = styled.label`
     height: 35px;
     position: relative;
     align-self: flex-end;
-    background-color: #5338BF;
+    background-color: #153BA3;
     color: white;
     font-weight: 600;
   }
@@ -72,10 +75,10 @@ export const InputForm = styled.input`
   width: 250px;
   height: 30px;
   padding: 5px;
-  background-color: #3d3b49;
+  background-color: #1A1B25;
   font-size:18px;
   color: #aaa;
-  border-radius: 6px;
+  border-bottom: 1px solid white;
 
   @media screen and (max-width: 900px){
     width: 370px;
@@ -88,14 +91,15 @@ export const FormButtonAdd = styled.button`
   height: 40px;
   padding: 5px;
   margin: 16px;
+  margin-top: 35px;
   font-weight: 700;
-  background-color: #5338BF;
+  background-color: #153ba3;
   border-radius: 6px;
   font-size: 20px;
   color: white;
   @media screen and (max-width: 1600px){
     margin: 0px;
-    margin-top: 25px;
+  margin-top: 35px;
   }
   @media screen and (max-width: 900px){
     width: 380px;

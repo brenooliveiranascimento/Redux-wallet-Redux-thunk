@@ -1,7 +1,6 @@
 .LogoContainer {
   display: flex;
   flex-direction: column;
-  margin-bottom: 100px;
 }
 
 h1 {
@@ -11,14 +10,14 @@ h1 {
 }
 
 .Logo_1 {
-  color: rgba(200, 30, 89);
+  color: white;
 }
 
 .Logo_2 {
-  color: #ddd;
+  color: #1a1b25;
   font-size: 50px;
   margin-top: -90px;
-  background-color: #8A185B;
+  background-color: #ffffff;
   padding: 10px;
   border-top-left-radius: 16px;
   border-bottom-right-radius: 16px;

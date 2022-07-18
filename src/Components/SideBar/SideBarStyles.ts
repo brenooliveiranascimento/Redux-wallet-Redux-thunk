@@ -6,7 +6,7 @@ export const SideContent = styled.aside`
   padding: 30px;
   /* width: 20%; */
   width: 23rem;
-  background-color: #212026;
+  background-color: #1A1B25;
   color: #ddd;
   flex-direction: column;
   align-items: center;
@@ -41,7 +41,6 @@ export const SideButton = styled.button`
   width: 100%;
   height: auto;
   padding: 5px;
-  border: 1px solid #5338BF;
   background-color: ${({ color }) => color};
   color: #aaa;
   border-radius: 6px;
@@ -58,7 +57,7 @@ export const SideButton = styled.button`
     margin-top: 25px;
   }
   :hover {
-    background-color: #5338BF;
+    background-color: #1a1b25;
   }
 
   @media screen and (max-width: 900px){
@@ -77,7 +76,7 @@ export const SideButton = styled.button`
 
 export const ButtonArea = styled.section`
   @media screen and (max-width: 900px){
-    flex-direction: row;
+  flex-direction: row;
   width: 100%;
   display: flex;
   align-items: center;

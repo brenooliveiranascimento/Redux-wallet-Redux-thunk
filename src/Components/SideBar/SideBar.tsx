@@ -17,7 +17,7 @@ function SideBar() {
           to="/"
         >
           <SideButton
-            color={location === '/' ? '#5338BF' : '#29282E'}
+            color={location === '/' ? '#1A1B25' : '#313447'}
             value="/"
           >
             <AiOutlineWallet />
@@ -30,7 +30,7 @@ function SideBar() {
           to="Monthly"
         >
           <SideButton
-            color={location === '/Monthly' ? '#5338BF' : '#29282E'}
+            color={location === '/Monthly' ? '#1A1B25' : '#313447'}
             type="button"
             value="Monthly"
           >
@@ -44,7 +44,7 @@ function SideBar() {
           to="/Config"
         >
           <SideButton
-            color={location === '/Config' ? '#5338BF' : '#29282E'}
+            color={location === '/Config' ? '#1A1B25' : '#313447'}
             type="button"
             value="Config"
           >

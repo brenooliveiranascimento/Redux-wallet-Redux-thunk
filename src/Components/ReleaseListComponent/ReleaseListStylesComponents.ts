@@ -5,8 +5,33 @@ export const ListContainer = styled.section`
   height: auto;
   display: flex;
   flex-direction: column;
+  color: white;
+  .newAre {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #313447;
+    color: white;
+    border-radius: 6px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-top: 10px;
+    @media screen and (max-width: 900px){
+      justify-content: center;
+    }
+  }
+
+  .arrows {
+    margin-top: 1.8rem;
+    font-size: 30px;
+
+    .newText {
+      font-size: 90px;
+    }
+  }
 
   h2 {
+    font-size: 30px;
     margin-top: 50px;
   }
 `;

@@ -5,7 +5,7 @@ export const HeaderWalletContainer = styled.header`
   height: 8rem;
   padding: 20px;
   margin: 20px;
-  background-color: #212026;
+  background-color: #1A1B25;
   border-radius: 15px;
   align-items: center;
   justify-content: center;

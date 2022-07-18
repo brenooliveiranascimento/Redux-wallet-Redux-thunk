@@ -19,7 +19,6 @@ function ReleaseListComponent() {
   const editRelease = (releaseSelected: any) => {
     const indexOfRelease = release
       .findIndex(({ releaseDataId }: any) => releaseDataId === releaseSelected.releaseDataId);
-    console.log(indexOfRelease);
     dispatch(enableEdit(releaseSelected, indexOfRelease));
   };
 

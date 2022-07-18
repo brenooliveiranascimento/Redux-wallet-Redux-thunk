@@ -5,7 +5,7 @@ export const ContainerHome = styled.main`
   flex-direction: row;
   height: 100vh;
   width: 100%;
-  background-color: #131216;
+  background-color: #313447;
   
   span, h2 {
     color: #aaa;
@@ -17,7 +17,7 @@ export const BlackContent = styled.section`
   flex-direction: row;
   height: auto;
   width: 100%;
-  background-color: #131216;
+  background-color: #313447;
   position: absolute;
   z-index: 0;
 `;
@@ -30,7 +30,7 @@ export const MainContent = styled.main`
   width: 100%;
   height: auto;
   margin-left: 20rem;
-  background-color: #131216;
+  background-color: #313447;
   @media screen and (max-width: 900px){
     margin-left: 0rem;
   }
