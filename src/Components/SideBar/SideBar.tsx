@@ -1,10 +1,10 @@
 import React from 'react';
 import { AiOutlineWallet, AiOutlineCalendar, AiOutlineSetting } from 'react-icons/ai';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ButtonArea, SideButton, SideContent } from './SideBarStyles';
 
 function SideBar() {
-  const location = useLocation().pathname;
+  const location = '/';
   return (
     <SideContent>
       <h2>
@@ -54,6 +54,7 @@ function SideBar() {
         </Link>
       </ButtonArea>
     </SideContent>
+
   );
 }
 
