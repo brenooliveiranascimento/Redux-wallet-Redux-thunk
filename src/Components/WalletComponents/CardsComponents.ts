@@ -4,7 +4,7 @@ export const CardMainContainer = styled.section`
   width: 380px;
   height: 6rem;
   border-radius: 20px;
-  margin-right: 20px;
+  margin-right: 5px;
   margin-top: 10px;
   background-color: ${({ color }: any) => color};
   align-items: flex-start;
@@ -26,7 +26,7 @@ export const CardMainContainer = styled.section`
   }
 
   @media screen and (max-width: 900px){
-    width: 40%;
+    width: 44%;
     height: 6rem;
     align-self: flex-start;
 

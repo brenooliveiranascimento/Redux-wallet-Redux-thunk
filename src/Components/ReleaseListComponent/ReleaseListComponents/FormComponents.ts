@@ -102,3 +102,61 @@ export const FormButtonAdd = styled.button`
     margin: 50px;
   }
 `;
+
+export const EditButtonAdd = styled.button`
+  width: 110px;
+  height: 40px;
+  padding: 5px;
+  margin: 16px;
+  font-weight: 700;
+  background-color: #5338BF;
+  border-radius: 6px;
+  font-size: 20px;
+  margin-top: 16px;
+  margin-right: -10px;
+  color: white;
+  @media screen and (max-width: 1600px){
+    margin: 0px;
+    margin-top: 18px;
+    margin-left: 10px;
+  }
+  @media screen and (max-width: 900px){
+    width: 380px;
+  }
+`;
+
+export const BtnDelet = styled.button`
+  width: 80px;
+  background-color: ${(props) => props.color};
+  color: white;
+  border-radius: 6px;
+  margin-left: 10px;
+  font-size: 17px;
+  margin
+  :hover {
+    background-color: #891b2c;
+  }
+
+  @media screen and (max-width: 1095px){
+    width: 50px;
+    font-size: 14px;
+  }
+`;
+
+export const BtnEdit = styled.button`
+  width: 80px;
+  background-color: ${(props) => props.color};
+  color: white;
+  border-radius: 6px;
+  text-decoration: dashed;
+  font-size: 17px;
+
+  :hover{
+    background-color: #563511;
+  }
+
+  @media screen and (max-width: 1095px){
+    font-size: 14px;
+    width: 50px;
+  }
+`;

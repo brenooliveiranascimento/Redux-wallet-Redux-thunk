@@ -3,6 +3,7 @@ import { actionTypes, stateTypes } from '../types/manegerReducerTypes';
 
 const ADD_RELEASE = 'ADD_RELEASE';
 const REMOVE_RELEASE = 'REMOVE_RELEASE';
+const UPDATE_RELEASE = 'UPDATE_RELEASE';
 
 const INITIAL_VALUE: stateTypes = {
   monthlyPayments: [],
@@ -32,6 +33,8 @@ function manegerReducer(state = INITIAL_VALUE, action = INITIAL_VALUE_ACTION) {
         wallet: state.wallet
           .filter(({ releaseDataId }: any) => releaseDataId !== action.payLoad.releaseDataId),
       };
+    case UPDATE_RELEASE:
+      return { ...state, wallet: action.payLoad };
     default:
       return state;
   }

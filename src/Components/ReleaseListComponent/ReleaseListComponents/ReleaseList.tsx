@@ -2,16 +2,25 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { AiOutlineArrowUp, AiOutlineArrowDown } from 'react-icons/ai';
 import { ValueIndicator } from '../ReleaseListStylesComponents';
-import { FormContainet } from './FormComponents';
+import { BtnDelet, BtnEdit, FormContainet } from './FormComponents';
 import { removeReleaseInDataBase } from '../../../redux/Actions/WalletActions/walletActions';
+import { enableEdit } from '../../../redux/Actions/EditActions/editActions';
 
 function ReleaseListComponent() {
   const release = useSelector((state:any) => state.manegerReducer.wallet);
   const userData = useSelector(({ userReducer }: any) => userReducer.userData);
+  const isEditing = useSelector(({ editReleaseReducer }: any) => editReleaseReducer.editing);
   const dispatch = useDispatch();
 
   const deletRelease = (releaseSelected: any) => {
     dispatch(removeReleaseInDataBase(userData, releaseSelected));
+  };
+
+  const editRelease = (releaseSelected: any) => {
+    const indexOfRelease = release
+      .findIndex(({ releaseDataId }: any) => releaseDataId === releaseSelected.releaseDataId);
+    console.log(indexOfRelease);
+    dispatch(enableEdit(releaseSelected, indexOfRelease));
   };
 
   return (
@@ -23,7 +32,7 @@ function ReleaseListComponent() {
             <th>Value</th>
             <th>Type</th>
             <th>Date</th>
-            <th>Deletar/Excluir</th>
+            <th>Editar/Excluir</th>
           </tr>
         </thead>
         {
@@ -57,13 +66,24 @@ function ReleaseListComponent() {
               <td>
                 {releaseItem.date}
               </td>
-              <button type="button">Edit</button>
-              <button
+              <BtnEdit
+                color={isEditing ? '#755622' : '#bc8138'}
+                disabled={isEditing}
+                onClick={() => editRelease(releaseItem)}
+                type="button"
+              >
+                Edit
+
+              </BtnEdit>
+              <BtnDelet
+                color={isEditing ? '#93242a' : '#C62C36'}
+                className="btnEdit"
+                disabled={isEditing}
                 onClick={() => deletRelease(releaseItem)}
                 type="button"
               >
                 Delete
-              </button>
+              </BtnDelet>
             </tr>
           ))
         }
