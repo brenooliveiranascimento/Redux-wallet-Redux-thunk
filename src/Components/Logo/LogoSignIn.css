@@ -1,7 +1,16 @@
+
+.generalContainer {
+  display: flex;
+  margin-bottom: -100px;
+}
+
 .LogoContainer {
   display: flex;
   flex-direction: column;
-  margin-bottom: 100px;
+  position: absolute;
+  top: -20px;
+  align-self: center;
+  margin-left: 40px;
 }
 
 h1 {
@@ -11,14 +20,14 @@ h1 {
 }
 
 .Logo_1 {
-  color: rgba(200, 30, 89);
+  color: white;
 }
 
 .Logo_2 {
-  color: #ddd;
+  color: #1a1b25;
   font-size: 50px;
-  margin-top: -90px;
-  background-color: #8A185B;
+  margin-top: -130px;
+  background-color: #ffffff;
   padding: 10px;
   border-top-left-radius: 16px;
   border-bottom-right-radius: 16px;
@@ -27,6 +36,5 @@ h1 {
 @media screen and (max-width: 1000px) {
   .LogoContainer {
     margin-bottom: -10px;
-    margin-top: -200px;
   }
 }

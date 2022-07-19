@@ -3,6 +3,7 @@
 /* eslint-disable no-console */
 import { Dispatch } from 'react';
 import { AnyAction } from 'redux';
+import { ADD_NEW_RELEASE, CANCEL_NEW_RELEASE } from '../../reducers/editRelease/editReleaseReducer';
 import { updateReleaseInWallet } from '../WalletActions/firebaseControl/walletControl';
 
 export const enableEdit = (release: any, indexOfRelease: number) => ({
@@ -26,6 +27,14 @@ export const saveEdit = () => ({
 export const updateReleaseInReducer = (release: any) => ({
   type: 'UPDATE_RELEASE',
   payLoad: release,
+});
+
+export const setNewRelease = () => ({
+  type: ADD_NEW_RELEASE,
+});
+
+export const cancelNewRelease = () => ({
+  type: CANCEL_NEW_RELEASE,
 });
 
 export const saveEditInDataBase = (userData: any, indexOfRelease: any, releaseInEditing: any): any => {

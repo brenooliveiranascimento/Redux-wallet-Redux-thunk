@@ -3,16 +3,16 @@ import styled from 'styled-components';
 export const SideContent = styled.aside`
   height: 100vh;
   display: flex;
+  background: url('../../assets/assets/layered-steps-haikei\ \(3\).svg') fixed center;
   padding: 30px;
   /* width: 20%; */
   width: 23rem;
-  background-color: #212026;
+  background-color: #0B0113;
   color: #ddd;
   flex-direction: column;
   align-items: center;
   position: fixed;
   z-index: 99;
-
   h2 {
     align-self: flex-start;
     margin-bottom: 100px;
@@ -24,24 +24,27 @@ export const SideContent = styled.aside`
 
   @media screen and (max-width: 900px){
     flex-direction: column;
-    height: 12vh;
+    height: 17vh;
     align-items: center;
-    justify-content: center;
     width: 100%;
     padding: 10px;
-
+    border-bottom-right-radius:50px;
+    border-bottom-left-radius:50px ;
+    margin-left: -15px;
+    padding: 10px;
+    justify-content: space-around;
     h2 {
     align-self: flex-start;
     margin-bottom: 5px;
+    margin-left: 17px;
   }
   }
 `;
 
 export const SideButton = styled.button`
-  width: 100%;
+  width: 300px;
   height: auto;
   padding: 5px;
-  border: 1px solid #5338BF;
   background-color: ${({ color }) => color};
   color: #aaa;
   border-radius: 6px;
@@ -58,15 +61,18 @@ export const SideButton = styled.button`
     margin-top: 25px;
   }
   :hover {
-    background-color: #5338BF;
+    background-color: #0B0113;
   }
 
   @media screen and (max-width: 900px){
-    width: 100%;
-    height: 50px;
+    background-color: #0B0113;
+    height: 30px;
     font-size: 20px;
-    padding: 8px ;
-    margin-top: 1rem;
+    width: 30%;
+    padding: 8px;
+    background-color: none;
+    margin-right: -30px;
+    color: ${({ color }) => (color === '#29282E' ? 'white' : color)};
    h3 {
     font-size: 16px;
     text-align: start;
@@ -77,11 +83,11 @@ export const SideButton = styled.button`
 
 export const ButtonArea = styled.section`
   @media screen and (max-width: 900px){
-    flex-direction: row;
+  flex-direction: row;
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  justify-content: space-around;
+  align-self: flex-start;
   }
   width: 100%;
 `;

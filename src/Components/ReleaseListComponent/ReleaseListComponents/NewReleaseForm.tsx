@@ -61,6 +61,7 @@ function NewReleaseForm() {
           onChange={({ target }) => updateReleaseData(target.name, target.value)}
           name="description"
           type="text"
+          placeholder="Boorguer king and coca"
         />
       </LabelForm>
       <LabelForm htmlFor="value">
@@ -70,6 +71,7 @@ function NewReleaseForm() {
           onChange={({ target }) => updateReleaseData(target.name, target.value)}
           name="value"
           type="number"
+          placeholder="35,45"
         />
       </LabelForm>
       <LabelForm>

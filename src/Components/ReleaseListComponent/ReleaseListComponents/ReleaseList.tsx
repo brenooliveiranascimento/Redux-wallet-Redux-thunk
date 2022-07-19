@@ -19,7 +19,6 @@ function ReleaseListComponent() {
   const editRelease = (releaseSelected: any) => {
     const indexOfRelease = release
       .findIndex(({ releaseDataId }: any) => releaseDataId === releaseSelected.releaseDataId);
-    console.log(indexOfRelease);
     dispatch(enableEdit(releaseSelected, indexOfRelease));
   };
 
@@ -31,7 +30,12 @@ function ReleaseListComponent() {
             <th>Description</th>
             <th>Value</th>
             <th>Type</th>
-            <th>Date</th>
+            <th
+              className="dateArea"
+            >
+              Date
+
+            </th>
             <th>Editar/Excluir</th>
           </tr>
         </thead>
@@ -49,6 +53,7 @@ function ReleaseListComponent() {
               </td>
               <td>
                 <ValueIndicator
+                  className="typeBtn"
                   color={releaseItem.type === 'Revenue' ? '#0C602D' : '#C62C36'}
                 >
                   <p>
@@ -63,7 +68,9 @@ function ReleaseListComponent() {
                   }
                 </ValueIndicator>
               </td>
-              <td>
+              <td
+                className="dateArea"
+              >
                 {releaseItem.date}
               </td>
               <BtnEdit
@@ -77,7 +84,6 @@ function ReleaseListComponent() {
               </BtnEdit>
               <BtnDelet
                 color={isEditing ? '#93242a' : '#C62C36'}
-                className="btnEdit"
                 disabled={isEditing}
                 onClick={() => deletRelease(releaseItem)}
                 type="button"

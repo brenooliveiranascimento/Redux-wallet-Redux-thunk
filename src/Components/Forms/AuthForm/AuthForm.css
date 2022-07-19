@@ -7,20 +7,6 @@
   justify-content: center;
 }
 
-.blourContainer {
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-  height: 400px;
-  align-items: center;
-  justify-content: center;
-  filter: blur(3px);
-  background-color: rgba(221, 221, 221, 0.1);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
-  z-index: 0;
-  border-radius: 10px;
-}
-
 .formContent {
   display: flex;
   flex-direction: column;
@@ -30,26 +16,32 @@
   z-index: 99;
 }
 
+.formContent label {
+  display: flex;
+  flex-direction: column;
+  color: #aaa;
+}
+
 .formContent input {
-  width: 300px;
-  border: none;
-  background-color: rgba(221, 221, 221, 0.2);
-  border-radius: 6px;
+  width: 370px;
+  background-color: #4b395a;
+  border-radius: 20px;
   margin: 10px;
-  height: 30px;
+  height: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
   color: #fff;
-  z-index: 99;
   font-size: 17px;
-  padding: 5px;
+  padding: 10px;
+  border-bottom: 1px solid white;
+  margin-left: -3px;
 }
 
 .formContent button {
   border: none;
   padding: 10px;
   width: 13rem;
-  border-radius: 6px;  
-  background-color: rgba(200, 20, 60, 0.1);
+  border-radius: 40px;  
+  background-color: #9835FF;
   color: #fff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
   font-size: 20px;
@@ -57,10 +49,11 @@
   font-weight: 700;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   transition: all 0,7s;
+  /* align-self: flex-start; */
 }
 
 button:hover{
-  background-color: rgba(93, 10, 26, 0.3);
+  background-color: #153ba3;
 }
 
 @media screen and (max-width: 1000px) {
@@ -69,6 +62,6 @@ button:hover{
   }
   .formContent input {
     align-self: flex-start;
-    width: 350px;
+    width: 390px;
   }
 }

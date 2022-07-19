@@ -12,7 +12,7 @@ function ExpensesCard() {
   useEffect(() => {
     setTotalExpense(sumAllExpense());
   }, [walletData]);
-  const colorCard: string = '#c62c36';
+  const colorCard: string = '#6e1672';
   return (
     <CardMainContainer
       color={colorCard}

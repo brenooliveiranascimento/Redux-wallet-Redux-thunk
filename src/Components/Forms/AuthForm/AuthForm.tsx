@@ -20,8 +20,8 @@ function AuthForm({ authFormProps }: any) {
           isRegister && (
             <label htmlFor="name">
               <input
-                data-testId="name-input"
                 placeholder="name"
+                data-testId="name-input"
                 value={userData.name}
                 onChange={(e) => updateUserData(e.target)}
                 type="text"
