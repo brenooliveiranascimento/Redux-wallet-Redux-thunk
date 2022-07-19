@@ -28,7 +28,7 @@ function Routes() {
 
   useEffect((): any => {
     if (userIsLoggedIn()) signIn();
-    setTimeout(() => setLoading(false), 1000);
+    setTimeout(() => setLoading(false), 1500);
   }, []);
 
   if (loading) {
