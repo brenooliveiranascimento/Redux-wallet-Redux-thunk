@@ -34,6 +34,7 @@
   padding: 10px;
   border-bottom: 1px solid white;
   margin-left: -3px;
+
 }
 
 .formContent button {
@@ -56,12 +57,11 @@ button:hover{
   background-color: #153ba3;
 }
 
-@media screen and (max-width: 1000px) {
-  .blourContainer {
-    width: 70%;
-  }
+@media screen and (max-width: 900px){
   .formContent input {
-    align-self: flex-start;
-    width: 390px;
+    width: 90%;
+  }
+  .formContent button {
+    width: 70%;
   }
 }

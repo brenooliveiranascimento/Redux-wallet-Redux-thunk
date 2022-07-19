@@ -20,6 +20,7 @@ function AuthForm({ authFormProps }: any) {
           isRegister && (
             <label htmlFor="name">
               <input
+                className="inputAuth"
                 placeholder="name"
                 data-testId="name-input"
                 value={userData.name}
