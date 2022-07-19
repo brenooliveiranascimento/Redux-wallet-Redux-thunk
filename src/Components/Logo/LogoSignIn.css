@@ -75,3 +75,22 @@ h1 {
     margin-bottom: -10px;
   }
 }
+
+  
+@media screen and (max-height: 720px) {
+  .LogoContainer {
+    margin-bottom: -100px;
+  }
+
+  .Logo_2Mobile {
+    top:220px;
+    left: 34%;
+    font-size: 26px;
+  }
+
+  .Logo_1Mobile {
+    top:20px;
+    font-size: 26px;
+    left: 34%;
+  }
+}
