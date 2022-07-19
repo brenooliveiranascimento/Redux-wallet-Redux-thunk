@@ -1,7 +1,11 @@
 import React from 'react';
-import { AiOutlineWallet, AiOutlineSetting } from 'react-icons/ai';
+import {
+  AiOutlineWallet, AiOutlineGithub, AiOutlineLinkedin,
+} from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-import { ButtonArea, SideButton, SideContent } from './SideBarStyles';
+import {
+  ButtonArea, EuArea, EuRedes, EuRedesArea, EuText, SideButton, SideContent,
+} from './SideBarStyles';
 import './style.css';
 
 function SideBar() {
@@ -30,16 +34,35 @@ function SideBar() {
           style={{ textDecoration: 'none' }}
           to="/Config"
         >
-          <SideButton
+          {/* <SideButton
             color={location === 'http://localhost:3000/Config' ? '#5338BF' : '#29282E'}
             type="button"
             value="Config"
           >
             <AiOutlineSetting />
             <h3>Config</h3>
-          </SideButton>
+          </SideButton> */}
         </Link>
       </ButtonArea>
+      <EuArea>
+        <EuText>
+          Developed by Breno Nascimento
+        </EuText>
+        <EuRedesArea>
+          <EuRedes
+            target="_blank"
+            href="https://github.com/brenooliveiranascimento"
+          >
+            <AiOutlineGithub />
+          </EuRedes>
+          <EuRedes
+            target="_blank"
+            href="https://www.linkedin.com/in/breno-nascimento-0b3331229/"
+          >
+            <AiOutlineLinkedin />
+          </EuRedes>
+        </EuRedesArea>
+      </EuArea>
     </SideContent>
   );
 }

@@ -8,6 +8,7 @@ export const SideContent = styled.aside`
   /* width: 20%; */
   width: 23rem;
   background-color: #0B0113;
+  border-top-right-radius: 50px;
   color: #ddd;
   flex-direction: column;
   align-items: center;
@@ -23,6 +24,7 @@ export const SideContent = styled.aside`
   }
 
   @media screen and (max-width: 900px){
+  border-top-right-radius: 0px;
     flex-direction: column;
     height: 17vh;
     align-items: center;
@@ -90,4 +92,47 @@ export const ButtonArea = styled.section`
   align-self: flex-start;
   }
   width: 100%;
+`;
+
+export const EuArea = styled.section`
+  position: absolute;
+  bottom: 100px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  @media screen and (max-width: 900px){
+    bottom:120px;
+    left: 0px;
+    left: 65%;
+  }
+`;
+
+export const EuText = styled.span`
+  @media screen and (max-width: 900px){
+    display: none;
+  }
+`;
+
+export const EuRedes = styled.a`
+  background-color: #29282E;
+  color: white;
+  font-size: 24px;
+  width: 40px;
+  padding: 10px;
+  border-radius: 6px;
+  align-items: center;
+  margin: 5px;
+  justify-content: center;
+  display: flex;
+
+  :hover {
+    background-color: #153BA3;
+    cursor: pointer;
+  }
+`;
+
+export const EuRedesArea = styled.section`
+  display: flex;
+  margin-left: -10px;
 `;
