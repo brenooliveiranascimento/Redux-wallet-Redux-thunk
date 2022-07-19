@@ -5,6 +5,7 @@ import animationData from '../../assets/lottie/xablau.json';
 
 function LogoSignIn() {
   const [widthScreen, setWidthScreen] = useState(window.innerWidth);
+  const [heighScreen, setheighthScreen] = useState(window.innerHeight);
   const defaultOptions: any = {
     loop: true,
     autoplay: true,
@@ -16,6 +17,7 @@ function LogoSignIn() {
 
   useEffect(() => {
     setInterval(() => setWidthScreen(window.innerWidth), 100);
+    setInterval(() => setheighthScreen(window.innerHeight), 100);
   }, []);
   if (widthScreen < 700) {
     return (
@@ -43,6 +45,8 @@ function LogoSignIn() {
             width: 200,
             height: 200,
             marginRight: 20,
+            marginTop: heighScreen < 720 ? 70 : 20,
+            marginBottom: heighScreen < 720 ? -50 : 0,
           }}
           options={defaultOptions}
         />
