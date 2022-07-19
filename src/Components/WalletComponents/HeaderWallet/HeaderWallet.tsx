@@ -7,7 +7,7 @@ import { signOutUser } from '../../../redux/Actions/AuthActions/firebaseControl/
 function HeaderWallet() {
   const userData = useSelector((state: any) => state.userReducer.userData);
   const dispatch = useDispatch();
-  const sair = () => {
+  const sigoutUser = () => {
     signOutUser();
     dispatch(signOut());
   };
@@ -16,7 +16,7 @@ function HeaderWallet() {
       <h2>MyWallet</h2>
       <span>{userData.email}</span>
       <ExitBtn
-        onClick={() => sair()}
+        onClick={() => sigoutUser()}
         type="button"
       >
         Exit
