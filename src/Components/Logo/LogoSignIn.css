@@ -86,11 +86,13 @@ h1 {
     top:220px;
     left: 34%;
     font-size: 26px;
+    display: none;
   }
 
   .Logo_1Mobile {
     top:20px;
     font-size: 26px;
     left: 34%;
+    display: none;
   }
 }

@@ -65,3 +65,21 @@ button:hover{
     width: 70%;
   }
 }
+
+@media screen and (max-height: 900px){
+  .formContent input {
+    height: 5px;
+    padding-left: 15px;
+    font-size: 13px;
+    width: 90%;
+  }
+  .formContent button {
+    width: 70%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    margin: 3px;
+  }  
+}
