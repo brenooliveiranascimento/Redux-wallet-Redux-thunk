@@ -15,7 +15,6 @@
 
 @media screen and (max-width: 1000px) {
   .signInContainer {
-    height: 100vh;
     background: url("../../assets/novo.svg")  center;
   } 
 }
