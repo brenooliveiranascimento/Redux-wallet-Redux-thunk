@@ -1,23 +1,24 @@
 import React from 'react';
-import { AiOutlineWallet, AiOutlineCalendar, AiOutlineSetting } from 'react-icons/ai';
+import { AiOutlineWallet, AiOutlineSetting } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { ButtonArea, SideButton, SideContent } from './SideBarStyles';
+import './style.css';
 
 function SideBar() {
-  const location = '/';
+  const location = window.location.href;
   return (
     <SideContent>
       <h2>
-        monthly fee manager
+        Redux Wallet
       </h2>
       <ButtonArea>
         <Link
-          style={{ textDecoration: 'none' }}
+          style={{ textDecoration: 'none', width: 'auto' }}
           className="LinksSideBar"
           to="/"
         >
           <SideButton
-            color={location === '/' ? '#1A1B25' : '#313447'}
+            color={location === 'http://localhost:3000/' ? '#5338BF' : '#29282E'}
             value="/"
           >
             <AiOutlineWallet />
@@ -27,24 +28,10 @@ function SideBar() {
         <Link
           className="LinksSideBar"
           style={{ textDecoration: 'none' }}
-          to="Monthly"
-        >
-          <SideButton
-            color={location === '/Monthly' ? '#1A1B25' : '#313447'}
-            type="button"
-            value="Monthly"
-          >
-            <AiOutlineCalendar />
-            <h3>My Monthly</h3>
-          </SideButton>
-        </Link>
-        <Link
-          className="LinksSideBar"
-          style={{ textDecoration: 'none' }}
           to="/Config"
         >
           <SideButton
-            color={location === '/Config' ? '#1A1B25' : '#313447'}
+            color={location === 'http://localhost:3000/Config' ? '#5338BF' : '#29282E'}
             type="button"
             value="Config"
           >
@@ -54,7 +41,6 @@ function SideBar() {
         </Link>
       </ButtonArea>
     </SideContent>
-
   );
 }
 

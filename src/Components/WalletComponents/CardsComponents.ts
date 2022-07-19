@@ -39,6 +39,14 @@ export const CardMainContainer = styled.section`
       margin-top: -40px;
     }
   }
+
+  @media screen and (max-width: 900px){
+    width: 40%;
+
+    h1 {
+      font-size: 23px;
+    }
+  }
 `;
 
 export const CardText = styled.span`

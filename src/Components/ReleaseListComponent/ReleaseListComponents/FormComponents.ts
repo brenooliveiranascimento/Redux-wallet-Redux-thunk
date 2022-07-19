@@ -5,28 +5,46 @@ export const FormContainet = styled.form`
   width: 100%;
   height: auto;
   border: #fff;
-  background-color: #1A1B25;
-  padding: 20px;
-  border-radius: 10px;
+  background-color: #0B0113;
+  padding: 24px;
+  border-radius: 70px;
   h2 {
     color: #fff;
   }
+
   select {
     width: 250px;
-    border-bottom: 1px solid white;
     border-top: none;
     border-left: none;
     border-right: none;
-    height: 40px;
-    padding: 10px;
-    background-color: #1A1B25;
+    height: 35px;
+    padding: 4px;
+    background-color: #4B395A;
+    border-radius: 20px;
     color: #aaa;
     font-size:18px;
 
   @media screen and (max-width: 900px){
     width: 380px;
     margin-bottom: 20px;
+   border-radius: 50px;
   }
+  }
+
+  @media screen and (max-width: 650px){
+    width: 90%;
+    thead th {
+    font-size: 14px;
+  }
+  }
+
+  @media screen and (max-width: 560px) {
+    .dateArea {
+      display: none;
+    }
+    .typeBtn {
+      width: 70px;
+    }
   }
 
   @media screen and (max-width: 1600px){
@@ -50,40 +68,42 @@ export const LabelForm = styled.label`
 
   .currentDateBtn {
     width: 70px;
-    top: -37px;
-    height: 35px;
+    top: -33px;
+    border-radius: 20px;
     position: relative;
     align-self: flex-end;
-    background-color: #153BA3;
+    background-color: #7627C6;
     color: white;
     font-weight: 600;
+    left: 10px;
   }
 
   .currentDateBtn:hover {
-    background-color: #2f216b;
     border:none
   }
 
-  @media screen and (max-width: 900px){
+  @media screen and (max-width: 650px){
+    input {
+      width: 100%;
+    }
+    select {
+      width: 250px;
+    }
     .currentDateBtn {
-    top: -53px;
-  } 
+    right: 3px;
   }
+  }
+
 `;
 
 export const InputForm = styled.input`
   width: 250px;
-  height: 30px;
+  height: 25px;
   padding: 5px;
-  background-color: #1A1B25;
+  background-color: #4B395A;
+  border-radius: 20px;
   font-size:18px;
   color: #aaa;
-  border-bottom: 1px solid white;
-
-  @media screen and (max-width: 900px){
-    width: 370px;
-    margin-bottom: 15px;
-  }
 `;
 
 export const FormButtonAdd = styled.button`
@@ -91,10 +111,10 @@ export const FormButtonAdd = styled.button`
   height: 40px;
   padding: 5px;
   margin: 16px;
-  margin-top: 35px;
+  margin-top: 28px;
   font-weight: 700;
   background-color: #153ba3;
-  border-radius: 6px;
+  border-radius: 20px;
   font-size: 20px;
   color: white;
   @media screen and (max-width: 1600px){
@@ -139,6 +159,10 @@ export const BtnDelet = styled.button`
   margin
   :hover {
     background-color: #891b2c;
+  }
+
+  @media screen and (max-width: 690px){
+    margin-left: 2px;
   }
 
   @media screen and (max-width: 1095px){

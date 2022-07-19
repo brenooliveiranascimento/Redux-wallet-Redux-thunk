@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { AiOutlineArrowUp, AiOutlineArrowDown } from 'react-icons/ai';
+import { AiOutlineArrowDown, AiOutlineArrowLeft } from 'react-icons/ai';
 import NewReleaseForm from './ReleaseListComponents/NewReleaseForm';
 import EditReleaseForm from './ReleaseListComponents/EditForm';
 import ReleaseListComponent from './ReleaseListComponents/ReleaseList';
@@ -27,13 +27,14 @@ function ReleaseList() {
 
         {
           addNewRelease ? (
-            <AiOutlineArrowUp
+            <AiOutlineArrowDown
+              style={{ marginTop: 45 }}
               className="arrows"
             />
           ) : (
-            <AiOutlineArrowDown
+            <AiOutlineArrowLeft
               className="arrows"
-
+              style={{ marginTop: 45 }}
             />
           )
         }

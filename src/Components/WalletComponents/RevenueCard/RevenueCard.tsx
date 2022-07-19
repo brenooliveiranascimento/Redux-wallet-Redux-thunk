@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { CardMainContainer } from '../CardsComponents';
 
 function RevenueCard() {
-  const colorCard: string = '#0c4b75';
+  const colorCard: string = '#0c7252';
   const walletData = useSelector(({ manegerReducer }: any) => manegerReducer.wallet);
   const [totalRevenue, setTotalRevenue] = useState<number>(0);
 

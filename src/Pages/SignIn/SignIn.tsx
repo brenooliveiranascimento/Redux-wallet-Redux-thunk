@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import AuthForm from '../../Components/Forms/AuthForm/AuthForm';
+import LoadingPage from '../../Components/LoadingPage/LoadingPage';
 import LogoSignIn from '../../Components/Logo/LogoSignIn';
 import { authFormPropTypes, updateUserDataPropTypes, userDataType } from '../../globalTypes/mapStateTypes';
 import { createUserAccount, signInUserWithEmailEndPassword } from '../../redux/Actions/AuthActions/authActions';
@@ -56,6 +57,12 @@ function SignIn() {
     handleRegisterAndSignIn: () => clearInputsAndChangeAuthState(),
   };
 
+  if (loading) {
+    return (
+      <LoadingPage />
+    );
+  }
+
   return (
     <section
       className="signInContainer"
@@ -64,15 +71,9 @@ function SignIn() {
         className="container"
       >
         <LogoSignIn />
-        {
-          loading ? (
-            <h1>Carregando....</h1>
-          ) : (
-            <AuthForm
-              authFormProps={formProps}
-            />
-          )
-        }
+        <AuthForm
+          authFormProps={formProps}
+        />
 
       </section>
     </section>

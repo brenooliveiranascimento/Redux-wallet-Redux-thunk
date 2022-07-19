@@ -24,13 +24,14 @@
 
 .formContent input {
   width: 370px;
-  background-color: #1A1B25;
+  background-color: #4b395a;
+  border-radius: 20px;
   margin: 10px;
   height: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
   color: #fff;
   font-size: 17px;
-  padding: 5px;
+  padding: 10px;
   border-bottom: 1px solid white;
   margin-left: -3px;
 }
@@ -40,7 +41,7 @@
   padding: 10px;
   width: 13rem;
   border-radius: 40px;  
-  background-color: #2058FF;
+  background-color: #9835FF;
   color: #fff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
   font-size: 20px;
@@ -48,6 +49,7 @@
   font-weight: 700;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   transition: all 0,7s;
+  /* align-self: flex-start; */
 }
 
 button:hover{
