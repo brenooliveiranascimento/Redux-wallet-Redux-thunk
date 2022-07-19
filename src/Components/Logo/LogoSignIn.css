@@ -4,6 +4,20 @@
   margin-bottom: -100px;
 }
 
+.generalContainerMobile {
+  display: flex;
+  margin-bottom: -100px;
+}
+
+.LogoContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: -20px;
+  align-self: center;
+  margin-left: 40px;
+}
+
 .LogoContainer {
   display: flex;
   flex-direction: column;
@@ -19,6 +33,16 @@ h1 {
   font-size: 70px;
 }
 
+.Logo_1Mobile {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  position: absolute;
+  align-self: center;
+  left: 150px;
+  top: 100px;
+}
+
 .Logo_1 {
   color: white;
 }
@@ -31,6 +55,19 @@ h1 {
   padding: 10px;
   border-top-left-radius: 16px;
   border-bottom-right-radius: 16px;
+}
+
+.Logo_2Mobile {
+  color: #1a1b25;
+  font-size: 50px;
+  margin-top: -130px;
+  background-color: #ffffff;
+  padding: 5px;
+  border-top-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  position: absolute;
+  top: 340px;
+  left: 150px;
 }
 
 @media screen and (max-width: 1000px) {
