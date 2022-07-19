@@ -39,7 +39,7 @@ h1 {
   font-size: 40px;
   position: absolute;
   align-self: center;
-  left: 150px;
+  left: 20%;
   top: 40px;
 }
 
@@ -67,7 +67,7 @@ h1 {
   border-bottom-right-radius: 16px;
   position: absolute;
   top: 280px;
-  left: 150px;
+  left: 20%;
 }
 
 @media screen and (max-width: 1000px) {
