@@ -15,7 +15,7 @@ function LogoSignIn() {
   };
 
   useEffect(() => {
-    setInterval(() => setWidthScreen(window.innerWidth), 1000);
+    setInterval(() => setWidthScreen(window.innerWidth), 100);
   }, []);
   if (widthScreen < 700) {
     return (
