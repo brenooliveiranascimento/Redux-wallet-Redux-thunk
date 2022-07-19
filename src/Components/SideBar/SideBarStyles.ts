@@ -119,10 +119,10 @@ export const EuRedes = styled.a`
   color: white;
   font-size: 24px;
   width: 40px;
-  margin: 10px;
   padding: 10px;
   border-radius: 6px;
   align-items: center;
+  margin: 5px;
   justify-content: center;
   display: flex;
 
