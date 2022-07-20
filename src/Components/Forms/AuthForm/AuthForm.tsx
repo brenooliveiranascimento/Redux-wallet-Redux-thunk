@@ -77,7 +77,7 @@ function AuthForm({ authFormProps }: any) {
             href="https://brenooliveiranascimento.github.io/"
             rel="noreferrer"
           >
-            <span>Ao se registrar voce concorda com os termos</span>
+            <span>Ao se registrar você concorda com os termos de uso de dados</span>
           </a>
         )
       }
