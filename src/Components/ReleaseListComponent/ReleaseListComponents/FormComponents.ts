@@ -131,12 +131,12 @@ export const EditButtonAdd = styled.button`
   width: 110px;
   height: 40px;
   padding: 5px;
-  margin: 16px;
+  margin: 20px;
   font-weight: 700;
   background-color: #5338BF;
   border-radius: 6px;
   font-size: 20px;
-  margin-top: 16px;
+  margin-top: 30px;
   margin-right: -10px;
   color: white;
   @media screen and (max-width: 1600px){
