@@ -1,46 +1,24 @@
-# Getting Started with Create React App
+<img src="https://user-images.githubusercontent.com/94801880/155900358-e86ee9b7-960d-4861-80fd-aa44d264d24e.png" width=300, align="center"/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### <h1>Redux Wallet<h1/> 
+Uma carteira de controle de gastos feita com TypeScript e Redux
 
-In the project directory, you can run:
+<img src="https://user-images.githubusercontent.com/94801880/180043587-64ba3fd4-263e-494e-8a4c-d1e381fc28a6.png" width=600>
+<img src="https://user-images.githubusercontent.com/94801880/180043746-906c0b18-c6a5-47ad-a535-ab2876cc92b5.png" width=600>
+  
+  
+ 
+  ### <h1>Aprendizado<h1>
+  Neste Projeto fui capaz de:
+  - Criar um gerenciamento global de estado com redux
+  - Consumir e atualizar um banco de dados com Redux-Thunk
+  - Praticar TypeScript e seus fundamentos
+  - Criar componentes dinamicos e reutilizaveis
+  - Sincronizar o store da aplicação com um banco de dados online
+  - Sistema de cadastro e LogIn de usuario
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Tecnologias utilizadas:
+<a href="https://www.reactnative.com/"><img src="https://user-images.githubusercontent.com/94801880/155344948-f9d6a2ce-f0a3-498b-9c42-b4c0631c967c.png" width=90></a>
+<a href="https://www.javascript.com/"><img src="https://user-images.githubusercontent.com/94801880/176779047-c064cae2-2e04-41a8-b20b-4a96cf7d9e23.png" width=30 height=30></a>
+<a href="https://styled-components.com/"><img src="https://user-images.githubusercontent.com/94801880/152538254-c2893779-4869-4474-9997-96ad488c6ae7.png" width=90></a>
