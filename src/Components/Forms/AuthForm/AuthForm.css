@@ -83,3 +83,13 @@ button:hover{
     margin: 3px;
   }  
 }
+
+.linkDataUse {
+  text-decoration: none;
+  color: #aaa;
+  margin-top: 23rem;
+}
+
+.linkDataUse span {
+  color: #aaa;
+}

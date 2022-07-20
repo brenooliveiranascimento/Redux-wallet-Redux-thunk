@@ -69,9 +69,18 @@ function AuthForm({ authFormProps }: any) {
           {isRegister ? 'Já possuo conta' : 'Criar uma conta'}
         </button>
       </form>
-      <section
-        className="blourContainer"
-      />
+      {
+        isRegister && (
+          <a
+            className="linkDataUse"
+            target="_blank"
+            href="https://brenooliveiranascimento.github.io/"
+            rel="noreferrer"
+          >
+            <span>Ao se registrar voce concorda com os termos</span>
+          </a>
+        )
+      }
     </section>
   );
 }
