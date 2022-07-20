@@ -8,7 +8,7 @@ Uma carteira de controle de gastos feita com TypeScript e Redux
   </h2>
   
 <img src="https://user-images.githubusercontent.com/94801880/180043587-64ba3fd4-263e-494e-8a4c-d1e381fc28a6.png" width=600>
-<img src="https://user-images.githubusercontent.com/94801880/180043746-906c0b18-c6a5-47ad-a535-ab2876cc92b5.png" width=600>
+<img src="https://user-images.githubusercontent.com/94801880/180046196-cd00e485-73b4-4223-aa72-323c0c73c864.png" width=600>
  
   
  
