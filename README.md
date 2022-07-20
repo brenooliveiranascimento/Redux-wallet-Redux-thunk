@@ -1,5 +1,3 @@
-<img src="https://user-images.githubusercontent.com/94801880/155900358-e86ee9b7-960d-4861-80fd-aa44d264d24e.png" width=300, align="center"/>
-
 
 ### <h1>Redux Wallet<h1/> 
 Uma carteira de controle de gastos feita com TypeScript e Redux
