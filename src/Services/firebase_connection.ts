@@ -4,12 +4,12 @@ import 'firebase/auth';
 import 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCwQlNv_5-jiEDvuZkvust82ZFCdV-MkAM',
-  authDomain: 'monthly-maneger.firebaseapp.com',
-  projectId: 'monthly-maneger',
-  storageBucket: 'monthly-maneger.appspot.com',
-  messagingSenderId: '747771561804',
-  appId: '1:747771561804:web:22e97e3bc944d6217c31e9',
+  apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECTID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_FIREBASE_APPID,
 };
 
 if (!firebase.apps.length) {
